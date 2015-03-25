@@ -3,6 +3,7 @@
  */
 var width = 960;
 var height = 650;
+
 var yScale = d3.scale.linear()  // 스케일 설정
     .domain([0, 8000])   // 원래 크기
     .range([0, height]) // 실체 출력 크기
