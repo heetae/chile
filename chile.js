@@ -3,7 +3,7 @@
  */
 var width = 960;
 var height = 650;
-var valueScaling = 5;
+var valueScaling = 7;
 
 var yScale = d3.scale.linear()  // 스케일 설정
     .domain([0, 8000])   // 원래 크기
@@ -19,8 +19,11 @@ d3.json("graph.json", function(error, graph) {
 //        dataSet.push(data[i].sales[0]);	// sales의 최초 데이터만 추출
 //    }
 
+    graph.nodes.forEach(function(d) { // nodes coordinate scaling
+        d.x = d.x/valueScaling;
+        d.y = d.y/valueScaling;
+    });
     graph.links.forEach(function(d) {
-        //console.log(d.source);
         d.source = graph.nodes[d.source];
         d.target = graph.nodes[d.target];
     });
@@ -37,10 +40,10 @@ d3.json("graph.json", function(error, graph) {
         //    var temp = d.source["y"];
         //    d.source["y"] = temp/valueScaling;
         //})})
-        .attr("x1", function(d) { return d.source.x/valueScaling; })
-        .attr("y1", function(d) { return d.source.y/valueScaling; })
-        .attr("x2", function(d) { return d.target.x/valueScaling; })
-        .attr("y2", function(d) { return d.target.y/valueScaling; })
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; })
 
 
      nodeElements = d3.select("#myGraph").append("g")
@@ -48,12 +51,12 @@ d3.json("graph.json", function(error, graph) {
         .data(graph.nodes)
         .enter()
         .append("circle")	// 데이터의 개수만큼 circle 요소가 추가됨
-        .call(function(elements){elements.each(function replaceByValue(d,i){ //JSON data의 value scale 조
-            var temp = d["x"];
-            d["x"] = temp/valueScaling;
-            var temp = d["y"];
-            d["y"] = temp/valueScaling;
-        })})
+//        .call(function(elements){elements.each(function replaceByValue(d,i){ //JSON data의 value scale 조
+//            var temp = d["x"];
+//            d["x"] = temp/valueScaling;
+//            var temp = d["y"];
+//            d["y"] = temp/valueScaling;
+//        })})
         //.call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
         .attr("class", "basic_nodes")	// CSS 클래스 지정
         .attr("cx", function (d) {
@@ -90,7 +93,7 @@ d3.json("graph.json", function(error, graph) {
 
     // ============ fisheye module start
     var fisheye = d3.fisheye.circular()
-        .radius(40);
+        .radius(80);
 
     var eye = d3.select("#myGraph").on("mousemove", function() {
         fisheye.focus(d3.mouse(this));
