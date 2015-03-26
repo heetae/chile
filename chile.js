@@ -90,26 +90,6 @@ d3.json("graph.json", function(error, graph) {
         .on("click",function(){d3.select(this).style("stroke", "black")})
          .on('dblclick', connectedNodes); //Added code for toggle highlight
 
-    var zoomer = d3.behavior.zoom().
-        scaleExtent([0.1,10]).
-        x(xScale).
-        y(yScale).
-        on("zoomstart", zoomstart).
-        on("zoom", redraw);
-
-    function zoomstart() {
-        node.each(function(d) {
-            d.selected = false;
-            d.previouslySelected = false;
-        });
-        node.classed("selected", false);
-    }
-
-    function redraw() {
-        vis.attr("transform",
-                "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
-    }
-
     // ============ fisheye module start
     var fisheye = d3.fisheye.circular()
         .radius(80);
