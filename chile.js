@@ -8,10 +8,22 @@ var valueScaling = 7;
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var brush = d3.svg.brush()
-    .x(x2)
-    .on("brush", brushed);
+//
+//var margin1 = {top: 10, right: 400, bottom: 10, left: 10},  // <---- focus
+//    margin2 = {top: 10, right: 10, bottom: 200, left: 400}, // <---context
+//    width1 = 960 - margin1.left - margin1.right,
+//    width2 = 960 - margin2.left - margin2.right,
+//    height1 = 500 - margin1.top - margin1.bottom, // <---- focus
+//    height2 = 500 - margin2.top - margin2.bottom; // <------ context
+//
+//var x = d3.time.scale().range([0, width1]),
+//    x2 = d3.time.scale().range([0, width2]),
+//    y = d3.scale.linear().range([height1, 0]),
+//    y2 = d3.scale.linear().range([height2, 0]);
+//
+//var brush = d3.svg.brush()
+//    .x(x2)
+//    .on("brush", brushed);
 
 //var focus = svg.append("g") << reference
 //    .attr("class", "focus")
