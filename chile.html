@@ -2,7 +2,26 @@
 <meta charset="utf-8">
 <style>
 
-    svg { width: 650px; height: 650px; border: 1px solid black; }
+    svg { border: 1px solid black; }
+
+    .area {
+        fill: steelblue;
+        clip-path: url(#clip);
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .brush .extent {
+        stroke: #fff;
+        fill-opacity: .125;
+        shape-rendering: crispEdges;
+    }
+
     circle {fill:red;}
     .basic_nodes{ fill:orange; stroke: #fff;stroke-width: 1.5px;}
     line {  stroke: #999;}
@@ -13,6 +32,6 @@
     </script>
     <script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3">
     </script>
-<svg id="myGraph"></svg>
+
 <script src="chile.js"></script>
 
