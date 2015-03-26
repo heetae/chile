@@ -20,10 +20,11 @@ d3.json("graph.json", function(error, graph) {
 //    }
 
     graph.links.forEach(function(d) {
-        console.log(d.source);
+        //console.log(d.source);
         d.source = graph.nodes[d.source];
         d.target = graph.nodes[d.target];
     });
+
 
     linksElements = d3.select("#myGraph").append("g")
         .selectAll("line")
@@ -41,6 +42,7 @@ d3.json("graph.json", function(error, graph) {
         .attr("x2", function(d) { return d.target.x/valueScaling; })
         .attr("y2", function(d) { return d.target.y/valueScaling; })
 
+
      nodeElements = d3.select("#myGraph").append("g")
         .selectAll("circle")
         .data(graph.nodes)
@@ -57,7 +59,6 @@ d3.json("graph.json", function(error, graph) {
         .attr("cx", function (d) {
             return d["x"];
         })
-        //.call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
         //.call(function(elements){elements.each(function(d,i){console.log(d)})})
         //.call(function(elements){elements.each(function(graph){console.log(graph)})})
         .attr("cy", function (graph) {
@@ -87,7 +88,7 @@ d3.json("graph.json", function(error, graph) {
                 "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
     }
 
-    // fisheye module statr
+    // ============ fisheye module start
     var fisheye = d3.fisheye.circular()
         .radius(40);
 
@@ -102,10 +103,10 @@ d3.json("graph.json", function(error, graph) {
             .attr("x2", function(d) { return d.target.fisheye.x; })
             .attr("y2", function(d) { return d.target.fisheye.y; });
     })
-    // fisheye module end
+    // ============ fisheye module end
 
 
-    //Toggle stores whether the highlighting is on
+    // ============ Toggle highlighting start
     var toggle = 0;
     //Create an array logging what is connected to what
     var linkedByIndex = {};
@@ -138,6 +139,6 @@ d3.json("graph.json", function(error, graph) {
             toggle = 0;
         }
     }
-
+    // ============ Toggle highlighting end
 
 });
