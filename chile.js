@@ -36,10 +36,10 @@ d3.json("graph.json", function(error, graph) {
         //    var temp = d.source["y"];
         //    d.source["y"] = temp/valueScaling;
         //})})
-        .attr("x1", function(d) { return d.source.x/5; })
-        .attr("y1", function(d) { return d.source.y/5; })
-        .attr("x2", function(d) { return d.target.x/5; })
-        .attr("y2", function(d) { return d.target.y/5; })
+        .attr("x1", function(d) { return d.source.x/valueScaling; })
+        .attr("y1", function(d) { return d.source.y/valueScaling; })
+        .attr("x2", function(d) { return d.target.x/valueScaling; })
+        .attr("y2", function(d) { return d.target.y/valueScaling; })
 
      circleElements = d3.select("#myGraph").append("g")
         .selectAll("circle")
@@ -65,7 +65,7 @@ d3.json("graph.json", function(error, graph) {
         })
         .attr("r", 4)	// 반지름을 지정
         .on("click",function(){d3.select(this).style("stroke", "black")})
-    
+
     var zoomer = d3.behavior.zoom().
         scaleExtent([0.1,10]).
         x(xScale).
