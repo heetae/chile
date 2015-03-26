@@ -18,18 +18,27 @@ d3.json("graph.json", function(error, graph) {
 //        dataSet.push(data[i].sales[0]);	// sales의 최초 데이터만 추출
 //    }
 
+
     var circleElements = d3.select("#myGraph").append("g")
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
         .append("circle")	// 데이터의 개수만큼 circle 요소가 추가됨
+        .call(function(elements){elements.each(function replaceByValue(d,i){ //JSON data의 value scale 조절
+            var temp = d["x"];
+            d["x"] = temp/5;
+            var temp = d["y"];
+            d["y"] = temp/5;
+        })})
+        .call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
         .attr("class", "basic_nodes")	// CSS 클래스 지정
         .attr("cx", function (d) {
-            return d["x"]/5;	// 최초 요소를 X 좌표로 함
+            return d["x"];	// 최초 요소를 X 좌표로 함
         })
-        .call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
+        //.call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
+        //.call(function(elements){elements.each(function(d,i){console.log(d)})})
         .attr("cy", function (graph) {
-            return graph["y"]/5;	// 2번째의 요소를 Y 좌표로 함
+            return graph["y"];	// 2번째의 요소를 Y 좌표로 함
         })
         .attr("r", 4)	// 반지름을 지정
         .on("click",function(){d3.select(this).style("stroke", "black")})
@@ -56,6 +65,11 @@ d3.json("graph.json", function(error, graph) {
     }
     var fisheye = d3.fisheye.circular()
         .radius(40);
+
+
+
+
+
     var eye = d3.select("#myGraph").on("mousemove", function() {
         fisheye.focus(d3.mouse(this));
         d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
@@ -67,9 +81,5 @@ d3.json("graph.json", function(error, graph) {
 //            .attr("x2", function(d) { return d.target.fisheye.x; })
 //            .attr("y2", function(d) { return d.target.fisheye.y; });
     })
-
-
-
-
 
 });
