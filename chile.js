@@ -41,7 +41,7 @@ d3.json("graph.json", function(error, graph) {
         .attr("x2", function(d) { return d.target.x/valueScaling; })
         .attr("y2", function(d) { return d.target.y/valueScaling; })
 
-     circleElements = d3.select("#myGraph").append("g")
+     nodeElements = d3.select("#myGraph").append("g")
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
@@ -65,7 +65,7 @@ d3.json("graph.json", function(error, graph) {
         })
         .attr("r", 4)	// 반지름을 지정
         .on("click",function(){d3.select(this).style("stroke", "black")})
-         .on('dblclick', connectedNodes); //Added code
+         .on('dblclick', connectedNodes); //Added code for toggle highlight
 
     var zoomer = d3.behavior.zoom().
         scaleExtent([0.1,10]).
@@ -113,7 +113,6 @@ d3.json("graph.json", function(error, graph) {
         linkedByIndex[i + "," + i] = 1;
     };
     graph.links.forEach(function (d) {
-        console.log(d.source.id )
         linkedByIndex[d.source.id + "," + d.target.id] = 1;
     });
     //This function looks up whether a pair are neighbours
@@ -124,7 +123,7 @@ d3.json("graph.json", function(error, graph) {
         if (toggle == 0) {
             //Reduce the opacity of all but the neighbouring nodes
             d = d3.select(this).node().__data__;
-            circleElements.style("opacity", function (o) {
+            nodeElements.style("opacity", function (o) {
                 return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
             });
             linksElements.style("opacity", function (o) {
@@ -134,7 +133,7 @@ d3.json("graph.json", function(error, graph) {
             toggle = 1;
         } else {
             //Put them back to opacity=1
-            circleElements.style("opacity", 1);
+            nodeElements.style("opacity", 1);
             linksElements.style("opacity", 1);
             toggle = 0;
         }
