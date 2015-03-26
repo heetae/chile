@@ -5,13 +5,20 @@ var width = 960;
 var height = 650;
 var valueScaling = 7;
 
-var yScale = d3.scale.linear()  // 스케일 설정
-    .domain([0, 8000])   // 원래 크기
-    .range([0, height]) // 실체 출력 크기
-var xScale = d3.scale.linear()  // 스케일 설정
-    .domain([0, 13000 ])   // 원래 크기
-    .range([0, width ]) // 실체 출력 크기
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
+var brush = d3.svg.brush()
+    .x(x2)
+    .on("brush", brushed);
+
+//var focus = svg.append("g") << reference
+//    .attr("class", "focus")
+//    .attr("transform", "translate(" + 400 + "," + 200 + ")");
+//focus.append("rect")
+//    .attr("width", 200)
+//    .attr("height", 300);
 
 d3.json("graph.json", function(error, graph) {
 //    var dataSet = [ ];	// 데이터를 저장할 배열을 준비
@@ -29,7 +36,7 @@ d3.json("graph.json", function(error, graph) {
     });
 
 
-    linksElements = d3.select("#myGraph").append("g")
+    linksElements = svg.append("g")
         .selectAll("line")
         .data(graph.links)
         .enter()
@@ -46,7 +53,7 @@ d3.json("graph.json", function(error, graph) {
         .attr("y2", function(d) { return d.target.y; })
 
 
-     nodeElements = d3.select("#myGraph").append("g")
+     nodeElements = svg.append("g")
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
@@ -95,7 +102,7 @@ d3.json("graph.json", function(error, graph) {
     var fisheye = d3.fisheye.circular()
         .radius(80);
 
-    var eye = d3.select("#myGraph").on("mousemove", function() {
+    var eye = svg.on("mousemove", function() {
         fisheye.focus(d3.mouse(this));
         d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
             .attr("cx", function(d) { return d.fisheye.x; })
