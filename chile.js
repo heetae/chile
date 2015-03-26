@@ -85,12 +85,10 @@ d3.json("graph.json", function(error, graph) {
         vis.attr("transform",
                 "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
     }
+
+    // fisheye module statr
     var fisheye = d3.fisheye.circular()
         .radius(40);
-
-
-
-
 
     var eye = d3.select("#myGraph").on("mousemove", function() {
         fisheye.focus(d3.mouse(this));
@@ -98,10 +96,11 @@ d3.json("graph.json", function(error, graph) {
             .attr("cx", function(d) { return d.fisheye.x; })
             .attr("cy", function(d) { return d.fisheye.y; })
             .attr("r", function(d) { return d.fisheye.z * 4; });
-//        link.attr("x1", function(d) { return d.source.fisheye.x; })
-//            .attr("y1", function(d) { return d.source.fisheye.y; })
-//            .attr("x2", function(d) { return d.target.fisheye.x; })
-//            .attr("y2", function(d) { return d.target.fisheye.y; });
+        linksElements.attr("x1", function(d) { return d.source.fisheye.x; })
+            .attr("y1", function(d) { return d.source.fisheye.y; })
+            .attr("x2", function(d) { return d.target.fisheye.x; })
+            .attr("y2", function(d) { return d.target.fisheye.y; });
     })
+    // fisheye module end
 
 });
