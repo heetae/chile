@@ -1,13 +1,13 @@
 /**
  * Created by heetae on 3/25/15.
  */
-var width = 960;
-var height = 650;
+var svg_width = 960;
+var svg_height = 650;
 var valueScaling = 7;
 
 var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", svg_width)
+    .attr("height", svg_height);
 //
 //var margin1 = {top: 10, right: 400, bottom: 10, left: 10},  // <---- focus
 //    margin2 = {top: 10, right: 10, bottom: 200, left: 400}, // <---context
