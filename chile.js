@@ -14,11 +14,6 @@ function zoomed() {
     container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
 }
 
-function dragstarted(d) {
-    d3.event.sourceEvent.stopPropagation();
-    d3.select(this).classed("dragging", true);
-}
-
 //
 //var zoom = d3.behavior.zoom()
 //    .scaleExtent([1, 10])
@@ -61,56 +56,77 @@ function dragstarted(d) {
     d3.select(this).classed("selected", true);
 }
 
-function dragged(d) {
-    d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
-}
+//
+//function dragged(d) {
+//    node.filter(function(d) { return d.selected; })
+//        .each(function(d) {
+//            d.x += d3.event.dx;
+//            d.y += d3.event.dy;
+//
+//            d.px += d3.event.dx;
+//            d.py += d3.event.dy;
+//        });
+
 
 function dragended(d) {
-    d3.select(this).classed("sselected", false);
+    d3.select(this).classed("selected", false);
 }
 
 d3.json("graph.json", function(error, graph) {
 
-    graph.nodes.forEach(function(d) { // nodes coordinate scaling
-        d.x = d.x/valueScaling;
-        d.y = d.y/valueScaling;
+    graph.nodes.forEach(function (d) { // nodes coordinate scaling
+        d.x = d.x / valueScaling;
+        d.y = d.y / valueScaling;
     });
-    graph.links.forEach(function(d) {
+    graph.links.forEach(function (d) {
         d.source = graph.nodes[d.source];
         d.target = graph.nodes[d.target];
     });
 
 
-
     var linksElements = container.append("g")
-        .attr("class","link")
+        .attr("class", "link")
         .selectAll("line")
         .data(graph.links)
         .enter()
         .append("line")
-        .style("stroke","#999")
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+        .style("stroke", "#999")
+        .attr("x1", function (d) {
+            return d.source.x;
+        })
+        .attr("y1", function (d) {
+            return d.source.y;
+        })
+        .attr("x2", function (d) {
+            return d.target.x;
+        })
+        .attr("y2", function (d) {
+            return d.target.y;
+        });
+
     var nodeElements = container.append("g")
         .attr("class", "nodes")	// CSS 클래스 지정
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
         .append("circle")	// 데이터의 개수만큼 circle 요소가 추가됨
-        .attr("cx", function (d) {return d["x"];})
+        .attr("cx", function (d) {
+            return d["x"];
+        })
         //.call(function(elements){elements.each(function(d,i){console.log(d)})})
         //.call(function(elements){elements.each(function(graph){console.log(graph)})})
-        .attr("cy", function (graph) {return graph["y"];})
+        .attr("cy", function (graph) {
+            return graph["y"];
+        })
         .attr("r", 4)	// 반지름을 지정
-        .on("click",function(){
+        .on("click", function () {
             d3.select(".selected").classed("selected", false);
-            d3.select(this).style("selected", true)})
+            d3.select(this).style("selected", true)
+        })
         .call(d3.behavior.drag()
-        .on("dragstart", dragstarted)
-        .on("drag", dragged)
-        .on("dragend", dragended))
+            .on("dragstart", dragstarted)
+            .on("drag", dragged)
+            .on("dragend", dragended))
         .on('dblclick', connectedNodes); //Added code for toggle highlight
 
     // ============ fisheye module start
@@ -136,15 +152,17 @@ d3.json("graph.json", function(error, graph) {
     //Create an array logging what is connected to what
     var linkedByIndex = {};
     for (i = 0; i < graph.nodes.length; i++) {
-        linkedByIndex[i + "," + i] = 1;
-    };
+        linkedByIndex[i + "," + i] = 1; // <==== self link
+    }
+    ;
     graph.links.forEach(function (d) {
-        linkedByIndex[d.source.id + "," + d.target.id] = 1;
+        linkedByIndex[d.source.id + "," + d.target.id] = 1; // <=== edge list
     });
     //This function looks up whether a pair are neighbours
     function neighboring(a, b) {
         return linkedByIndex[a.id + "," + b.id];
     }
+
     function connectedNodes() {
         if (toggle == 0) {
             //Reduce the opacity of all but the neighbouring nodes
@@ -153,7 +171,7 @@ d3.json("graph.json", function(error, graph) {
                 return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
             });
             linksElements.style("opacity", function (o) {
-                return d.id==o.source.id | d.id==o.target.id ? 1 : 0.1;
+                return d.id == o.source.id | d.id == o.target.id ? 1 : 0.1;
             });
             //Reduce the op
             toggle = 1;
@@ -164,6 +182,21 @@ d3.json("graph.json", function(error, graph) {
             toggle = 0;
         }
     }
+
     // ============ Toggle highlighting end
 
+    function dragged(d) {
+
+//        nodeElements.filter(function (d) {
+//            return d.selected;
+//        })
+//            .attr("transform", "translate(" + d3.event.translate + ")");
+//    }
+
+//        targetid = d3.select(this).node().__data__;
+//        linksElements.attr("x1", function (o) {return targetid.id==o.source.id ? targetid.x += d3.event.dx : targetid.x;})
+//
+        d3.select(this).attr("cx", d.x += d3.event.dx).attr("cy", d.y += d3.event.dy);
+//    d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+    }
 });

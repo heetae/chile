@@ -4,10 +4,6 @@
 
     svg { border: 1px solid black; }
 
-    .area {
-        fill: steelblue;
-        clip-path: url(#clip);
-    }
     .container rect{
         fill:red;
     }
@@ -18,6 +14,10 @@
     }
 
     .nodes circle {fill:orange; stroke: #fff;stroke-width: 1.5px;}
+    .nodes circle.selected {
+        fill: red;
+        stroke: brown;
+    }
 
     .link line { stroke: #999;}
 
