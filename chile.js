@@ -13,6 +13,12 @@ var container = svg.append("g");
 function zoomed() {
     container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
 }
+
+function dragstarted(d) {
+    d3.event.sourceEvent.stopPropagation();
+    d3.select(this).classed("dragging", true);
+}
+
 //
 //var zoom = d3.behavior.zoom()
 //    .scaleExtent([1, 10])
@@ -52,7 +58,7 @@ function zoomed() {
 function dragstarted(d) {
     console.log(d3.select(this));
     d3.event.sourceEvent.stopPropagation();
-    d3.select(this).classed("circle", true);
+    d3.select(this).classed("selected", true);
 }
 
 function dragged(d) {
@@ -60,7 +66,7 @@ function dragged(d) {
 }
 
 function dragended(d) {
-    d3.select(this).classed("circle", false);
+    d3.select(this).classed("sselected", false);
 }
 
 d3.json("graph.json", function(error, graph) {
@@ -87,7 +93,6 @@ d3.json("graph.json", function(error, graph) {
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
-
     var nodeElements = container.append("g")
         .attr("class", "nodes")	// CSS 클래스 지정
         .selectAll("circle")
@@ -99,7 +104,9 @@ d3.json("graph.json", function(error, graph) {
         //.call(function(elements){elements.each(function(graph){console.log(graph)})})
         .attr("cy", function (graph) {return graph["y"];})
         .attr("r", 4)	// 반지름을 지정
-        .on("click",function(){d3.select(this).style("stroke", "black")})
+        .on("click",function(){
+            d3.select(".selected").classed("selected", false);
+            d3.select(this).style("selected", true)})
         .call(d3.behavior.drag()
         .on("dragstart", dragstarted)
         .on("drag", dragged)
