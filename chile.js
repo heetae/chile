@@ -1,23 +1,24 @@
-/**
- * Created by heetae on 3/25/15.
- */
 var svg_width = 960;
 var svg_height = 650;
 var valueScaling = 7;
 
 var svg = d3.select("body").append("svg")
     .attr("width", svg_width)
-    .attr("height", svg_height);
-
-var rect = svg.append("rect")
-    .attr("width", svg_width)
     .attr("height", svg_height)
-    .style("fill", "none")
-    .style("pointer-events", "all");
+    .call(d3.behavior.zoom().scaleExtent([0.2, 8]).on("zoom", zoomed))
+    .append("g");
 
 var container = svg.append("g");
-container.         .call(drag)
 
+function zoomed() {
+    container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+//
+//var zoom = d3.behavior.zoom()
+//    .scaleExtent([1, 10])
+//    .on("zoom", zoomed);
+//
+//
 //
 //var margin1 = {top: 10, right: 400, bottom: 10, left: 10},  // <---- focus
 //    margin2 = {top: 10, right: 10, bottom: 200, left: 400}, // <---context
@@ -42,11 +43,11 @@ container.         .call(drag)
 //    .attr("width", 200)
 //    .attr("height", 300);
 
-var drag = d3.behavior.drag()
-    .origin(function(d) { return d; })
-    .on("dragstart", dragstarted)
-    .on("drag", dragged)
-    .on("dragend", dragended);
+//var drag = d3.behavior.drag()
+//    .origin(function(d) { return d; })
+//    .on("dragstart", dragstarted)
+//    .on("drag", dragged)
+//    .on("dragend", dragended);
 
 function dragstarted(d) {
     console.log(d3.select(this));
@@ -62,12 +63,7 @@ function dragended(d) {
     d3.select(this).classed("circle", false);
 }
 
-
 d3.json("graph.json", function(error, graph) {
-//    var dataSet = [ ];	// 데이터를 저장할 배열을 준비
-//    for(var i=0; i<data.length; i++){	// 데이터 줄 수만큼 반복
-//        dataSet.push(data[i].sales[0]);	// sales의 최초 데이터만 추출
-//    }
 
     graph.nodes.forEach(function(d) { // nodes coordinate scaling
         d.x = d.x/valueScaling;
@@ -79,47 +75,36 @@ d3.json("graph.json", function(error, graph) {
     });
 
 
-    linksElements = svg.append("g")
+
+    var linksElements = container.append("g")
+        .attr("class","link")
         .selectAll("line")
         .data(graph.links)
         .enter()
-        .append("line")	// 데이터의 개수만큼 circle 요소가 추가됨
-        //.call(function(elements){elements.each(function replaceByValue(d,i){ //JSON data의 value scale 조
-        //    var temp = d.source["x"];
-        //    d.source["x"] = temp/valueScaling;
-        //    var temp = d.source["y"];
-        //    d.source["y"] = temp/valueScaling;
-        //})})
+        .append("line")
+        .style("stroke","#999")
         .attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; })
+        .attr("y2", function(d) { return d.target.y; });
 
-
-     nodeElements = svg.append("g")
+    var nodeElements = container.append("g")
+        .attr("class", "nodes")	// CSS 클래스 지정
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
         .append("circle")	// 데이터의 개수만큼 circle 요소가 추가됨
-//        .call(function(elements){elements.each(function replaceByValue(d,i){ //JSON data의 value scale 조
-//            var temp = d["x"];
-//            d["x"] = temp/valueScaling;
-//            var temp = d["y"];
-//            d["y"] = temp/valueScaling;
-//        })})
-        //.call(function(elements){elements.each(function(d,i){console.log(xScale(d["x"]))})})
-        .attr("class", "basic_nodes")	// CSS 클래스 지정
-        .attr("cx", function (d) {
-            return d["x"];
-        })
+        .attr("cx", function (d) {return d["x"];})
         //.call(function(elements){elements.each(function(d,i){console.log(d)})})
         //.call(function(elements){elements.each(function(graph){console.log(graph)})})
-        .attr("cy", function (graph) {
-            return graph["y"];
-        })
+        .attr("cy", function (graph) {return graph["y"];})
         .attr("r", 4)	// 반지름을 지정
         .on("click",function(){d3.select(this).style("stroke", "black")})
-         .on('dblclick', connectedNodes); //Added code for toggle highlight
+        .call(d3.behavior.drag()
+        .on("dragstart", dragstarted)
+        .on("drag", dragged)
+        .on("dragend", dragended))
+        .on('dblclick', connectedNodes); //Added code for toggle highlight
 
     // ============ fisheye module start
 //    var fisheye = d3.fisheye.circular()
@@ -127,7 +112,7 @@ d3.json("graph.json", function(error, graph) {
 //
 //    var eye = svg.on("mousemove", function() {
 //        fisheye.focus(d3.mouse(this));
-//        d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
+//        d3.select("circle").each(function(d) { d.fisheye = fisheye(d); })
 //            .attr("cx", function(d) { return d.fisheye.x; })
 //            .attr("cy", function(d) { return d.fisheye.y; })
 //            .attr("r", function(d) { return d.fisheye.z * 4; });

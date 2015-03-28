@@ -8,24 +8,19 @@
         fill: steelblue;
         clip-path: url(#clip);
     }
-
-    .axis path,
+    .container rect{
+        fill:red;
+    }
     .axis line {
         fill: none;
         stroke: #000;
         shape-rendering: crispEdges;
     }
 
-    .brush .extent {
-        stroke: #fff;
-        fill-opacity: .125;
-        shape-rendering: crispEdges;
-    }
+    .nodes circle {fill:orange; stroke: #fff;stroke-width: 1.5px;}
 
-    circle {fill:red;}
-    .basic_nodes{ fill:orange; stroke: #fff;stroke-width: 1.5px;}
+    .link line { stroke: #999;}
 
-    line {  stroke: #999;}
 </style>
 <body>
 
