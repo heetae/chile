@@ -8,6 +8,16 @@ var valueScaling = 7;
 var svg = d3.select("body").append("svg")
     .attr("width", svg_width)
     .attr("height", svg_height);
+
+var rect = svg.append("rect")
+    .attr("width", svg_width)
+    .attr("height", svg_height)
+    .style("fill", "none")
+    .style("pointer-events", "all");
+
+var container = svg.append("g");
+container.         .call(drag)
+
 //
 //var margin1 = {top: 10, right: 400, bottom: 10, left: 10},  // <---- focus
 //    margin2 = {top: 10, right: 10, bottom: 200, left: 400}, // <---context
@@ -31,6 +41,27 @@ var svg = d3.select("body").append("svg")
 //focus.append("rect")
 //    .attr("width", 200)
 //    .attr("height", 300);
+
+var drag = d3.behavior.drag()
+    .origin(function(d) { return d; })
+    .on("dragstart", dragstarted)
+    .on("drag", dragged)
+    .on("dragend", dragended);
+
+function dragstarted(d) {
+    console.log(d3.select(this));
+    d3.event.sourceEvent.stopPropagation();
+    d3.select(this).classed("circle", true);
+}
+
+function dragged(d) {
+    d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+}
+
+function dragended(d) {
+    d3.select(this).classed("circle", false);
+}
+
 
 d3.json("graph.json", function(error, graph) {
 //    var dataSet = [ ];	// 데이터를 저장할 배열을 준비
@@ -91,24 +122,24 @@ d3.json("graph.json", function(error, graph) {
          .on('dblclick', connectedNodes); //Added code for toggle highlight
 
     // ============ fisheye module start
-    var fisheye = d3.fisheye.circular()
-        .radius(80);
-
-    var eye = svg.on("mousemove", function() {
-        fisheye.focus(d3.mouse(this));
-        d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
-            .attr("cx", function(d) { return d.fisheye.x; })
-            .attr("cy", function(d) { return d.fisheye.y; })
-            .attr("r", function(d) { return d.fisheye.z * 4; });
-        linksElements.attr("x1", function(d) { return d.source.fisheye.x; })
-            .attr("y1", function(d) { return d.source.fisheye.y; })
-            .attr("x2", function(d) { return d.target.fisheye.x; })
-            .attr("y2", function(d) { return d.target.fisheye.y; });
-    })
+//    var fisheye = d3.fisheye.circular()
+//        .radius(80);
+//
+//    var eye = svg.on("mousemove", function() {
+//        fisheye.focus(d3.mouse(this));
+//        d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
+//            .attr("cx", function(d) { return d.fisheye.x; })
+//            .attr("cy", function(d) { return d.fisheye.y; })
+//            .attr("r", function(d) { return d.fisheye.z * 4; });
+//        linksElements.attr("x1", function(d) { return d.source.fisheye.x; })
+//            .attr("y1", function(d) { return d.source.fisheye.y; })
+//            .attr("x2", function(d) { return d.target.fisheye.x; })
+//            .attr("y2", function(d) { return d.target.fisheye.y; });
+//    })
     // ============ fisheye module end
 
 
-    // ============ Toggle highlighting start
+    // ============ Toggle highlighting start+ .on('dblclick', connectedNodes);
     var toggle = 0;
     //Create an array logging what is connected to what
     var linkedByIndex = {};
