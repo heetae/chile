@@ -76,21 +76,17 @@ d3.json("graph.json", function(error, graph) {
         });
 
     var nodeElements = container.append("g")
-        .attr("class", "nodes")	// CSS 클래스 지정
+        .attr("class", "nodes")
         .selectAll("circle")
         .data(graph.nodes)
         .enter()
-        .append("circle")	// 데이터의 개수만큼 circle 요소가 추가됨
-        .attr("cx", function (d) {
-            return d["x"];
-        })
-        .attr("cy", function (graph) {
-            return graph["y"];
-        })
-        .attr("r", 4)	// 반지름을 지정
+        .append("circle")
+        .attr("cx", function (d) {return d["x"];})
+        .attr("cy", function (graph) {return graph["y"];})
+        .attr("r", 4)
         .on("click", function () {
             d3.select(".selected").classed("selected", false);
-            d3.select(this).style("selected", true)
+            d3.select(this).style("selected", true);
         })
         .call(d3.behavior.drag()
             .on("dragstart", dragstarted)
