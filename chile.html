@@ -4,27 +4,23 @@
 
     svg { border: 1px solid black; }
 
-    .area {
-        fill: steelblue;
-        clip-path: url(#clip);
+    .container rect{
+        fill:red;
     }
-
-    .axis path,
     .axis line {
         fill: none;
         stroke: #000;
         shape-rendering: crispEdges;
     }
 
-    .brush .extent {
-        stroke: #fff;
-        fill-opacity: .125;
-        shape-rendering: crispEdges;
+    .nodes circle {fill:orange; stroke: #fff;stroke-width: 1.5px;}
+    .nodes circle.selected {
+        fill: red;
+        stroke: brown;
     }
 
-    circle {fill:red;}
-    .basic_nodes{ fill:orange; stroke: #fff;stroke-width: 1.5px;}
-    line {  stroke: #999;}
+    .link line { stroke: #999;}
+
 </style>
 <body>
 
