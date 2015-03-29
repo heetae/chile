@@ -5,7 +5,7 @@ var valueScaling = 7;
 var svg = d3.select("body").append("svg")
     .attr("width", svg_width)
     .attr("height", svg_height)
-    .call(d3.behavior.zoom().scaleExtent([0.2, 8]).on("zoom", zoomed))
+    .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed))
     .append("g");
 
 var container = svg.append("g");
@@ -13,60 +13,10 @@ var container = svg.append("g");
 function zoomed() {
     container.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
 }
-
-//
-//var zoom = d3.behavior.zoom()
-//    .scaleExtent([1, 10])
-//    .on("zoom", zoomed);
-//
-//
-//
-//var margin1 = {top: 10, right: 400, bottom: 10, left: 10},  // <---- focus
-//    margin2 = {top: 10, right: 10, bottom: 200, left: 400}, // <---context
-//    width1 = 960 - margin1.left - margin1.right,
-//    width2 = 960 - margin2.left - margin2.right,
-//    height1 = 500 - margin1.top - margin1.bottom, // <---- focus
-//    height2 = 500 - margin2.top - margin2.bottom; // <------ context
-//
-//var x = d3.time.scale().range([0, width1]),
-//    x2 = d3.time.scale().range([0, width2]),
-//    y = d3.scale.linear().range([height1, 0]),
-//    y2 = d3.scale.linear().range([height2, 0]);
-//
-//var brush = d3.svg.brush()
-//    .x(x2)
-//    .on("brush", brushed);
-
-//var focus = svg.append("g") << reference
-//    .attr("class", "focus")
-//    .attr("transform", "translate(" + 400 + "," + 200 + ")");
-//focus.append("rect")
-//    .attr("width", 200)
-//    .attr("height", 300);
-
-//var drag = d3.behavior.drag()
-//    .origin(function(d) { return d; })
-//    .on("dragstart", dragstarted)
-//    .on("drag", dragged)
-//    .on("dragend", dragended);
-
 function dragstarted(d) {
-    console.log(d3.select(this));
     d3.event.sourceEvent.stopPropagation();
     d3.select(this).classed("selected", true);
 }
-
-//
-//function dragged(d) {
-//    node.filter(function(d) { return d.selected; })
-//        .each(function(d) {
-//            d.x += d3.event.dx;
-//            d.y += d3.event.dy;
-//
-//            d.px += d3.event.dx;
-//            d.py += d3.event.dy;
-//        });
-
 
 function dragended(d) {
     d3.select(this).classed("selected", false);
@@ -83,6 +33,27 @@ d3.json("graph.json", function(error, graph) {
         d.target = graph.nodes[d.target];
     });
 
+    function dragged() {
+        d = d3.select(this).node().__data__;
+        d3.select(this).attr("cx", d.x += d3.event.dx).attr("cy", d.y += d3.event.dy);
+        linksElements
+            .attr("x1", function (o) {
+                return d.id == o.target.id ? d.x : o.target.x;})
+            .attr("x2", function (o) {
+                return d.id == o.source.id ? d.x : o.source.x;})
+            .attr("y1", function (o) {
+                return d.id == o.target.id ? d.y : o.target.y;})
+            .attr("y2", function (o) {
+                return d.id == o.source.id ? d.y : o.source.y;});
+//            .attr("x1", function (o) {
+//                return d.id == o.target.id ? o.target.x += d3.event.dx : o.target.x;})
+//            .attr("x2", function (o) {
+//                return d.id == o.source.id ? o.source.x += d3.event.dx : o.source.x;})
+//            .attr("y1", function (o) {
+//                return d.id == o.target.id ? o.target.y += d3.event.dy : o.target.y;})
+//            .attr("y2", function (o) {
+//                return d.id == o.source.id ? o.source.y += d3.event.dy : o.source.y;});
+    }
 
     var linksElements = container.append("g")
         .attr("class", "link")
@@ -113,8 +84,6 @@ d3.json("graph.json", function(error, graph) {
         .attr("cx", function (d) {
             return d["x"];
         })
-        //.call(function(elements){elements.each(function(d,i){console.log(d)})})
-        //.call(function(elements){elements.each(function(graph){console.log(graph)})})
         .attr("cy", function (graph) {
             return graph["y"];
         })
@@ -145,6 +114,7 @@ d3.json("graph.json", function(error, graph) {
 //            .attr("y2", function(d) { return d.target.fisheye.y; });
 //    })
     // ============ fisheye module end
+
 
 
     // ============ Toggle highlighting start+ .on('dblclick', connectedNodes);
@@ -185,18 +155,5 @@ d3.json("graph.json", function(error, graph) {
 
     // ============ Toggle highlighting end
 
-    function dragged(d) {
 
-//        nodeElements.filter(function (d) {
-//            return d.selected;
-//        })
-//            .attr("transform", "translate(" + d3.event.translate + ")");
-//    }
-
-//        targetid = d3.select(this).node().__data__;
-//        linksElements.attr("x1", function (o) {return targetid.id==o.source.id ? targetid.x += d3.event.dx : targetid.x;})
-//
-        d3.select(this).attr("cx", d.x += d3.event.dx).attr("cy", d.y += d3.event.dy);
-//    d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
-    }
 });
