@@ -23,25 +23,8 @@ function dragstarted(d) {
 function dragended(d) {
     //d3.select(this).classed("selected", false);
 }
-function clicked(d) {
-    // if double click timer is active, this click is the double click
-    if ( dblclick_timer )
-    {
-        clearTimeout(dblclick_timer)
-        dblclick_timer = false
-        // double click code code comes here
-        console.log("double click fired")
-    }
-    // otherwise, what to do after single click (double click has timed out)
-    else dblclick_timer = setTimeout(function(){
-        dblclick_timer = false
-        // single click code code comes here
-        console.log("single click fired")
-        console.log(d3.select(this))
-    }, 250)
-}
-var dblclick_timer = false;
 
+var dblclick_timer = false;
 
 d3.json("graph.json", function(error, graph) {
 
@@ -106,10 +89,6 @@ d3.json("graph.json", function(error, graph) {
         .attr("cy", function (graph) {return graph["y"];})
         .attr("r", 4)
         .on("click", clicked)
-        //.on("click", function (d) {
-        //    d3.select(".selected").classed("selected", false);
-        //    d3.select(this).attr("class","selected").style("selected", true);
-        //})
         .call(d3.behavior.drag()
             .on("dragstart", dragstarted)
             .on("drag", dragged)
@@ -136,6 +115,7 @@ d3.json("graph.json", function(error, graph) {
 
     // ============ Toggle highlighting start+ .on('dblclick', connectedNodes);
     var toggle = 0;
+    var oneclick = 0;
     //Create an array logging what is connected to what
     var linkedByIndex = {};
     for (i = 0; i < graph.nodes.length; i++) {
@@ -153,11 +133,13 @@ d3.json("graph.json", function(error, graph) {
     function connectedNodes() {
         //nodeElements.classed("selected",false);
         if (toggle == 0) {
+            console.log("connected ok")
             //Reduce the opacity of all but the neighbouring nodes
             d = d3.select(this).node().__data__;
             nodeElements.style("opacity", function (o) {
                 return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
             })
+            nodeElements.classed("selected", false);
             linksElements.style("opacity", function (o) {
                 return d.id == o.source.id | d.id == o.target.id ? 1 : 0.1;
             });
@@ -165,6 +147,7 @@ d3.json("graph.json", function(error, graph) {
             d3.select(this).classed("selected", true);
             toggle = 1;
         } else {
+            console.log("connected fail")
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
@@ -172,6 +155,54 @@ d3.json("graph.json", function(error, graph) {
         }
 
     }
-
     // ============ Toggle highlighting end
+    var selectednode=null;
+    function clicked() {
+        selectednode=d3.select(this)
+        if (dblclick_timer) {
+            clearTimeout(dblclick_timer)
+            dblclick_timer = false
+            // double click code code comes here
+            console.log("double click fired")
+        } else {
+            dblclick_timer = setTimeout(function(){
+                dblclick_timer = false
+                // single click code code comes here
+                console.log("one click fired");
+
+            }, 250)
+            if (oneclick == 0) {
+                nodeElements.style("opacity", 1).classed("selected",false);
+                linksElements.style("opacity", 1);
+                d3.select(this).classed("selected", true);
+                toggle = 0;
+                oneclick = 1;
+            } else {
+                //Put them back to opacity=1
+                nodeElements.style("opacity", 1).classed("selected",false);
+                linksElements.style("opacity", 1);
+                toggle = 0;
+            }
+            d3.select(this).classed("selected", true);
+            //Reduce the op
+
+        }
+    }
+
+//    function clicked() {
+//        if (dblclick_timer) {
+//            clearTimeout(dblclick_timer)
+//            dblclick_timer = false
+//            // double click code code comes here
+//            console.log("double click fired")
+//        } else dblclick_timer = setTimeout(function(){
+//                dblclick_timer = false
+//                // single click code code comes here
+//                console.log("one click fired");
+//            }, 250)
+//
+//            //Reduce the op
+//
+//        }
+
 });
