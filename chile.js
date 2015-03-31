@@ -1,10 +1,12 @@
-var svg_width = 960;
-var svg_height = 650;
+var width = 960;
+var height = 650;
 var valueScaling = 7;
+var offsetx = 100;
+var offsety = 300;
 
 var svg = d3.select("body").append("svg")
-    .attr("width", svg_width)
-    .attr("height", svg_height)
+    .attr("width", width)
+    .attr("height", height)
     .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed))
     .append("g");
 
@@ -25,8 +27,8 @@ function dragended(d) {
 d3.json("graph.json", function(error, graph) {
 
     graph.nodes.forEach(function (d) { // nodes coordinate scaling
-        d.x = d.x / valueScaling;
-        d.y = d.y / valueScaling;
+        d.x = (d.x / valueScaling)+offsetx;
+        d.y = height-(d.y / valueScaling)+offsety;
     });
     graph.links.forEach(function (d) {
         d.source = graph.nodes[d.source];
