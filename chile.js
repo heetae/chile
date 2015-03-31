@@ -17,12 +17,31 @@ function zoomed() {
 }
 function dragstarted(d) {
     d3.event.sourceEvent.stopPropagation();
-    d3.select(this).classed("selected", true);
+    //d3.select(this).classed("selected", true);
 }
 
 function dragended(d) {
-    d3.select(this).classed("selected", false);
+    //d3.select(this).classed("selected", false);
 }
+function clicked(d) {
+    // if double click timer is active, this click is the double click
+    if ( dblclick_timer )
+    {
+        clearTimeout(dblclick_timer)
+        dblclick_timer = false
+        // double click code code comes here
+        console.log("double click fired")
+    }
+    // otherwise, what to do after single click (double click has timed out)
+    else dblclick_timer = setTimeout(function(){
+        dblclick_timer = false
+        // single click code code comes here
+        console.log("single click fired")
+        console.log(d3.select(this))
+    }, 250)
+}
+var dblclick_timer = false;
+
 
 d3.json("graph.json", function(error, graph) {
 
@@ -86,10 +105,11 @@ d3.json("graph.json", function(error, graph) {
         .attr("cx", function (d) {return d["x"];})
         .attr("cy", function (graph) {return graph["y"];})
         .attr("r", 4)
-        .on("click", function () {
-            d3.select(".selected").classed("selected", false);
-            d3.select(this).style("selected", true);
-        })
+        .on("click", clicked)
+        //.on("click", function (d) {
+        //    d3.select(".selected").classed("selected", false);
+        //    d3.select(this).attr("class","selected").style("selected", true);
+        //})
         .call(d3.behavior.drag()
             .on("dragstart", dragstarted)
             .on("drag", dragged)
@@ -97,23 +117,22 @@ d3.json("graph.json", function(error, graph) {
         .on('dblclick', connectedNodes); //Added code for toggle highlight
 
     // ============ fisheye module start
-//    var fisheye = d3.fisheye.circular()
-//        .radius(80);
-//
-//    var eye = svg.on("mousemove", function() {
-//        fisheye.focus(d3.mouse(this));
-//        d3.select("circle").each(function(d) { d.fisheye = fisheye(d); })
-//            .attr("cx", function(d) { return d.fisheye.x; })
-//            .attr("cy", function(d) { return d.fisheye.y; })
-//            .attr("r", function(d) { return d.fisheye.z * 4; });
-//        linksElements.attr("x1", function(d) { return d.source.fisheye.x; })
-//            .attr("y1", function(d) { return d.source.fisheye.y; })
-//            .attr("x2", function(d) { return d.target.fisheye.x; })
-//            .attr("y2", function(d) { return d.target.fisheye.y; });
-//    })
+    //var fisheye = d3.fisheye.circular()
+    //    .radius(100);
+    //
+    //var eye = svg.on("mousemove", function() {
+    //    fisheye.focus(d3.mouse(this));
+    //    d3.select("circle").each(function(d) { d.fisheye = fisheye(d); })
+    //        .attr("cx", function(d) { return d.fisheye.x; })
+    //        .attr("cy", function(d) { return d.fisheye.y; })
+    //        .attr("r", function(d) { return d.fisheye.z * 4; });
+    //    linksElements
+    //        .attr("x1", function(d) { return d.source.fisheye.x; })
+    //        .attr("y1", function(d) { return d.source.fisheye.y; })
+    //        .attr("x2", function(d) { return d.target.fisheye.x; })
+    //        .attr("y2", function(d) { return d.target.fisheye.y; });
+    //})
     // ============ fisheye module end
-
-
 
     // ============ Toggle highlighting start+ .on('dblclick', connectedNodes);
     var toggle = 0;
@@ -132,26 +151,27 @@ d3.json("graph.json", function(error, graph) {
     }
 
     function connectedNodes() {
+        //nodeElements.classed("selected",false);
         if (toggle == 0) {
             //Reduce the opacity of all but the neighbouring nodes
             d = d3.select(this).node().__data__;
             nodeElements.style("opacity", function (o) {
                 return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
-            });
+            })
             linksElements.style("opacity", function (o) {
                 return d.id == o.source.id | d.id == o.target.id ? 1 : 0.1;
             });
             //Reduce the op
+            d3.select(this).classed("selected", true);
             toggle = 1;
         } else {
             //Put them back to opacity=1
-            nodeElements.style("opacity", 1);
+            nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             toggle = 0;
         }
+
     }
 
     // ============ Toggle highlighting end
-
-
 });
