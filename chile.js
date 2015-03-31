@@ -7,7 +7,7 @@ var offsety = 300;
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed))
+    .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed)).on("dblclick.zoom", null)
     .append("g");
 
 var container = svg.append("g");
