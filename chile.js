@@ -66,6 +66,7 @@ d3.json("graph.json", function(error, graph) {
         .enter()
         .append("line")
         .style("stroke", "#999")
+        .attr("opacity", 0)
         .attr("x1", function (d) {
             return d.source.x;
         })
@@ -87,13 +88,17 @@ d3.json("graph.json", function(error, graph) {
         .append("circle")
         .attr("cx", function (d) {return d["x"];})
         .attr("cy", function (graph) {return graph["y"];})
-        .attr("r", 4)
+        .attr("r", 40)
+        .attr("opacity", 0)
         .on("click", clicked)
         .call(d3.behavior.drag()
             .on("dragstart", dragstarted)
             .on("drag", dragged)
             .on("dragend", dragended))
         .on('dblclick', connectedNodes); //Added code for toggle highlight
+
+    nodeElements.transition().duration(400).attr("r",4).attr("opacity", 1);
+    linksElements.transition().duration(400).attr("opacity", 1);
 
     // ============ fisheye module start
     //var fisheye = d3.fisheye.circular()
