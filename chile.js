@@ -146,17 +146,20 @@ d3.json("graph.json", function(error, graph) {
             //Reduce the op
             d3.select(this).classed("selected", true);
             toggle = 1;
+            oneclick = 1;
         } else {
             console.log("connected fail")
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             toggle = 0;
+            oneclick = 0;
         }
 
     }
     // ============ Toggle highlighting end
     var selectednode=null;
+
     function clicked() {
         selectednode=d3.select(this)
         if (dblclick_timer) {
@@ -171,19 +174,43 @@ d3.json("graph.json", function(error, graph) {
                 console.log("one click fired");
 
             }, 250)
-            if (oneclick == 0) {
+            if (toggle == 1 && oneclick ==1) {
+                nodeElements.style("opacity", 1).classed("selected",false);
+                linksElements.style("opacity", 1);
+                toggle = 0;
+                oneclick = 0;
+            } else if (toggle == 0 && oneclick ==0){
+                //Put them back to opacity=1
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
                 d3.select(this).classed("selected", true);
                 toggle = 0;
-                oneclick = 1;
-            } else {
-                //Put them back to opacity=1
+                oneclick=1;
+            } else if (toggle == 0 && oneclick ==1 && d3.select(this).style("opacity") ==1){
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
+                d3.select(this).classed("selected", false);
+                oneclick = 0;
+            } else {
+                nodeElements.style("opacity", 1).classed("selected",false);
+                linksElements.style("opacity", 1);
+                d3.select(this).classed("selected", true);
                 toggle = 0;
+                oneclick=1;
             }
-            d3.select(this).classed("selected", true);
+            //if (oneclick == 0) {
+            //    nodeElements.style("opacity", 1).classed("selected",false);
+            //    linksElements.style("opacity", 1);
+            //    d3.select(this).classed("selected", true);
+            //    toggle = 0;
+            //    oneclick = 1;
+            //} else {
+            //    //Put them back to opacity=1
+            //    nodeElements.style("opacity", 1).classed("selected",false);
+            //    linksElements.style("opacity", 1);
+            //    toggle = 0;
+            //}
+
             //Reduce the op
 
         }
