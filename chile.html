@@ -13,13 +13,18 @@
         shape-rendering: crispEdges;
     }
 
-    .nodes circle {fill:orange; stroke: #fff;stroke-width: 1.5px;}
+    .nodes circle {fill:orange; stroke: #fff;stroke-width: 1px;}
     .nodes circle.selected {
         fill: red;
         stroke: brown;
     }
 
     .link line { stroke: #999;}
+    .link line.selected {
+        opacity:1;
+    }
+
+    .background rect {fill:red;}
 
 </style>
 <body>
