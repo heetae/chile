@@ -180,49 +180,8 @@ d3.json("graph.json", function(error, graph) {
     // ============ Toggle highlighting end
     //var selectednode=null;
 
-//    function clicked() {
-//        //selectednode=d3.select(this)
-//        if (dblclick_timer) {
-//            clearTimeout(dblclick_timer)
-//            dblclick_timer = false
-//            // double click code code comes here
-//            console.log("double click fired")
-//        } else {
-//            dblclick_timer = setTimeout(function(){
-//                dblclick_timer = false
-//                // single click code code comes here
-//                console.log("one click fired");
-//            }, 250)
-//            if (toggle == 1 && oneclick ==1) {
-//                nodeElements.style("opacity", 1).classed("selected",false);
-//                linksElements.style("opacity", 1);
-//                toggle = 0;
-//                oneclick = 0;
-//            } else if (toggle == 0 && oneclick ==0){
-//                //Put them back to opacity=1
-//                nodeElements.style("opacity", 1).classed("selected",false);
-//                linksElements.style("opacity", 1);
-//                d3.select(this).classed("selected", true);
-//                toggle = 0;
-//                oneclick=1;
-//            } else if (toggle == 0 && oneclick ==1 && d3.select(this).style("opacity") ==1){
-//                nodeElements.style("opacity", 1).classed("selected",false);
-//                linksElements.style("opacity", 1);
-//                d3.select(this).classed("selected", false);
-//                oneclick = 0;
-//            } else {
-//                nodeElements.style("opacity", 1).classed("selected",false);
-//                linksElements.style("opacity", 1);
-//                d3.select(this).classed("selected", true);
-//                toggle = 0;
-//                oneclick=1;
-//            }
-//            //Reduce the op
-//
-//        }
-//    }
-
     function clicked() {
+        //selectednode=d3.select(this)
         if (dblclick_timer) {
             clearTimeout(dblclick_timer)
             dblclick_timer = false
@@ -233,8 +192,30 @@ d3.json("graph.json", function(error, graph) {
                 dblclick_timer = false
                 // single click code code comes here
                 console.log("one click fired");
+            }, 250)
+
+            //Reduce the op
+
+        }
+    }
+
+    function clicked() {
+        var tmp = d3.select(this);
+        if (dblclick_timer) {
+            clearTimeout(dblclick_timer)
+            dblclick_timer = false
+            // double click code code comes here
+            console.log("double click fired")
+        } else {
+
+            dblclick_timer = setTimeout(function(){
+                dblclick_timer = false
+                console.log("one click fired")
+                tmp.classed("selected", true);
+                conclick=1;
+
+                // single click code code comes here
             }, 250)}
-        d3.select(this).attr("r",40)
         }
 
     var windowgraph = svg
@@ -257,32 +238,32 @@ d3.json("graph.json", function(error, graph) {
 
 //        var margin = svgWidth/(plotpoint - 1);	// 꺾은선 그래프의 간격 계산
 
-        nodeElements.on("click", function(){
-            pickupdata(dataSet,d3.select(this).node().__data__.id)
-//            drawGraph(dataSet,d3.select(this).node().__data__.id)
-
-        });
+//        nodeElements.on("click", function(){
+//            pickupdata(dataSet,d3.select(this).node().__data__.id)
+////            drawGraph(dataSet,d3.select(this).node().__data__.id)
+//
+//        });
 //        console.log(plotdata[20])
 //        console.log(plotdata[20][2])
 //
 //        console.log(plotdata[20][2]["x"])
         function pickupdata(dataSet,id){
             var dataSet = [];
-            console.log(id);
+//            console.log(id);
             plotpoint=plotdata[id].length;
 //        console.log(plotdata[20][2])
             for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
             }
-                    console.log(dataSet);
+//                    console.log(dataSet);
             drawGraph(dataSet,id);
         };
 
 // 꺾은선 그래프의 좌표를 계산하는 메서드
 
         function drawGraph(dataSet,nodeid) {
-            console.log("graph draw")
-            console.log(dataSet[0])
+//            console.log("graph draw")
+//            console.log(dataSet[0])
             var margin = svgWidth / (dataSet.length - 1);
             var delta_k = d3.svg.line()	// svg의 선
                 .x(function (d, i) {
