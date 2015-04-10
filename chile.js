@@ -246,7 +246,7 @@ d3.json("graph.json", function(error, graph) {
             pickupdata(dataSet,node.node().__data__.id)
             drawGraph(dataSet,node.node().__data__.id)
         };
-
+        var path_var=0;
         function pickupdata(dataSet,id){
             var dataSet = [];
             plotpoint=plotdata[id].length;
@@ -254,9 +254,8 @@ d3.json("graph.json", function(error, graph) {
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
             }
             console.log(dataSet.length)
+            d3.select("svg").selectAll("path").remove();
             drawGraph(dataSet,id);
-//            d3.select("delta_k").selectAll("line").remove();
-
         };
 
 // 꺾은선 그래프의 좌표를 계산하는 메서드
@@ -270,12 +269,12 @@ d3.json("graph.json", function(error, graph) {
                     return graphHeight - (d[1]*graphHeight)+windowoffsety;	// 데이터로부터 Y 좌표 빼기
                 })
 
+            d3.select("#k_line").remove();
             // 꺾은선 그래프 그리기
             var lineElements = svg.append("path")
                 .attr("class", "line")
                 .attr("id","#k_line")
-                .attr("d", delta_k(dataSet))	//연속선 지정
-
+                .attr("d", delta_k(dataSet))
         };
     })
 });
