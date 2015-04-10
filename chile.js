@@ -50,14 +50,6 @@ d3.json("graph.json", function(error, graph) {
                 return d.id == o.target.id ? d.y : o.target.y;})
             .attr("y2", function (o) {
                 return d.id == o.source.id ? d.y : o.source.y;});
-//            .attr("x1", function (o) {
-//                return d.id == o.target.id ? o.target.x += d3.event.dx : o.target.x;})
-//            .attr("x2", function (o) {
-//                return d.id == o.source.id ? o.source.x += d3.event.dx : o.source.x;})
-//            .attr("y1", function (o) {
-//                return d.id == o.target.id ? o.target.y += d3.event.dy : o.target.y;})
-//            .attr("y2", function (o) {
-//                return d.id == o.source.id ? o.source.y += d3.event.dy : o.source.y;});
     }
     var background = container
         .append("rect")
@@ -115,24 +107,6 @@ d3.json("graph.json", function(error, graph) {
 
     nodeElements.transition().duration(400).attr("r",4).attr("opacity", 1);
     linksElements.transition().duration(400).attr("opacity", 1);
-
-    // ============ fisheye module start
-    //var fisheye = d3.fisheye.circular()
-    //    .radius(100);
-    //
-    //var eye = svg.on("mousemove", function() {
-    //    fisheye.focus(d3.mouse(this));
-    //    d3.select("circle").each(function(d) { d.fisheye = fisheye(d); })
-    //        .attr("cx", function(d) { return d.fisheye.x; })
-    //        .attr("cy", function(d) { return d.fisheye.y; })
-    //        .attr("r", function(d) { return d.fisheye.z * 4; });
-    //    linksElements
-    //        .attr("x1", function(d) { return d.source.fisheye.x; })
-    //        .attr("y1", function(d) { return d.source.fisheye.y; })
-    //        .attr("x2", function(d) { return d.target.fisheye.x; })
-    //        .attr("y2", function(d) { return d.target.fisheye.y; });
-    //})
-    // ============ fisheye module end
 
     // ============ Toggle highlighting start+ .on('dblclick', connectedNodes);
     var toggle = 0;
@@ -218,6 +192,7 @@ d3.json("graph.json", function(error, graph) {
         }
 
     function choice(node){
+        console.log(node.style("fill"))
         if (toggle == 1 && oneclick ==1) {
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
@@ -233,7 +208,7 @@ d3.json("graph.json", function(error, graph) {
             toggle = 0;
             oneclick=1;
             console.log("b");
-        } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "red"){
+        } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             node.classed("selected", false);
@@ -250,25 +225,21 @@ d3.json("graph.json", function(error, graph) {
         }
     }
 
+        var graphWidth = 320;	// SVG 요소의 넓이
+        var graphHeight = 240;	// SVG 요소의 높이
+        var dataSet = [];	// 데이터셋
+        var windowoffsetx = 600
+        var windowoffsety = 100
 
     var windowgraph = svg
         .append("rect")
         .attr("class", "background")
         .attr("x",600)
         .attr("y",100)
-        .attr("width",320)
-        .attr("height",240)
+        .attr("width",graphWidth)
+        .attr("height",graphHeight)
         .attr("fill","red");
 
-        var svgWidth = 320;	// SVG 요소의 넓이
-        var svgHeight = 240;	// SVG 요소의 높이
-        var dataSet = [];	// 데이터셋
-//        var margin = svgWidth / (dataSet.length - 1);	// 꺾은선 그래프의 간격 계산
-        var windowoffsetx = 600
-        var windowoffsety = 100
-
-
-//        var margin = svgWidth/(plotpoint - 1);	// 꺾은선 그래프의 간격 계산
 
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
@@ -277,55 +248,30 @@ d3.json("graph.json", function(error, graph) {
 
         function pickupdata(dataSet,id){
             var dataSet = [];
-//            console.log(id);
             plotpoint=plotdata[id].length;
-//        console.log(plotdata[20][2])
             for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
             }
             drawGraph(dataSet,id);
 //            d3.select("delta_k").selectAll("line").remove();
+            d3.select("line").selectAll("*").remove();
         };
 
 // 꺾은선 그래프의 좌표를 계산하는 메서드
 
         function drawGraph(dataSet,nodeid) {
-//            console.log("graph draw")
-//            console.log(dataSet[0])
             var delta_k = d3.svg.line()	// svg의 선
                 .x(function (d, i) {
-                    console.log(d);
-                    return d[0]*svgWidth/19.9 + windowoffsetx;	// X 좌표는 표시 순서×간격
+                    return d[0]*graphWidth/19.9 + windowoffsetx;	// X 좌표는 표시 순서×간격
                 })
                 .y(function (d, i) {
-                    return svgHeight - (d[1]*svgHeight)+windowoffsety;	// 데이터로부터 Y 좌표 빼기
+                    return graphHeight - (d[1]*graphHeight)+windowoffsety;	// 데이터로부터 Y 좌표 빼기
                 })
 
             // 꺾은선 그래프 그리기
             var lineElements = svg.append("path")
                 .attr("class", "line")
                 .attr("d", delta_k(dataSet))	//연속선 지정
-
-//            svg.selectAll(delta_k).remove();
         };
-
-
-//
-//        var line = d3.svg.line()	// svg의 선
-//            .x(function(d, i){
-//                return d.x*100;	// X 좌표는 표시 순서×간격
-//            })
-//            .y(function(d, i){
-//                return d.y*100;	// 데이터로부터 Y 좌표 빼기
-//            })
-//
-//// 꺾은선 그래프 그리기
-//        var lineElements = d3.svg
-//            .append("path")	// 데이터 수만큼 path 요소가 추가됨
-//            .attr("class", "line")	// CSS 클래스 지정
-//            .attr("d", line(dataSet))
-
     })
-
-
 });
