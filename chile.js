@@ -7,6 +7,7 @@ var offsety = 600;
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("id","#mainsvg")
     .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed)).on("dblclick.zoom", null)
     .append("g");
 
@@ -252,9 +253,10 @@ d3.json("graph.json", function(error, graph) {
             for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
             }
+            console.log(dataSet.length)
             drawGraph(dataSet,id);
 //            d3.select("delta_k").selectAll("line").remove();
-            d3.select("line").selectAll("*").remove();
+
         };
 
 // 꺾은선 그래프의 좌표를 계산하는 메서드
@@ -271,7 +273,9 @@ d3.json("graph.json", function(error, graph) {
             // 꺾은선 그래프 그리기
             var lineElements = svg.append("path")
                 .attr("class", "line")
+                .attr("id","#k_line")
                 .attr("d", delta_k(dataSet))	//연속선 지정
+
         };
     })
 });
