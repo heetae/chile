@@ -210,14 +210,42 @@ d3.json("graph.json", function(error, graph) {
 
             dblclick_timer = setTimeout(function(){
                 dblclick_timer = false
-                console.log("one click fired")
-                tmp.classed("selected", true);
-                conclick=1;
-
                 // single click code code comes here
+                console.log("one click fired");
+                choice(tmp)
             }, 250)}
         }
 
+    function choice(node){
+        if (toggle == 1 && oneclick ==1) {
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            toggle = 0;
+            oneclick = 0;
+            console.log("a");
+        } else if (toggle == 0 && oneclick ==0){
+            //Put them back to opacity=1
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            toggle = 0;
+            oneclick=1;
+            console.log("b");
+        } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "red"){
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", false);
+            oneclick = 0;
+            console.log("c");
+        } else {
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            console.log("d");
+            toggle = 0;
+            oneclick=1;
+        }
+    }
     var windowgraph = svg
         .append("rect")
         .attr("class", "background")
@@ -238,15 +266,11 @@ d3.json("graph.json", function(error, graph) {
 
 //        var margin = svgWidth/(plotpoint - 1);	// 꺾은선 그래프의 간격 계산
 
-//        nodeElements.on("click", function(){
-//            pickupdata(dataSet,d3.select(this).node().__data__.id)
-////            drawGraph(dataSet,d3.select(this).node().__data__.id)
+//        function deltagraph (node){
+//            pickupdata(dataSet,node.node().__data__.id)
+//            drawGraph(dataSet,d3.select(this).node().__data__.id)
 //
-//        });
-//        console.log(plotdata[20])
-//        console.log(plotdata[20][2])
-//
-//        console.log(plotdata[20][2]["x"])
+//        };
         function pickupdata(dataSet,id){
             var dataSet = [];
 //            console.log(id);
