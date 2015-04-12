@@ -199,7 +199,7 @@ d3.json("graph.json", function(error, graph) {
             linksElements.style("opacity", 1);
             toggle = 0;
             oneclick = 0;
-            console.log("a");
+//            console.log("a");
         } else if (toggle == 0 && oneclick ==0){
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
@@ -208,19 +208,19 @@ d3.json("graph.json", function(error, graph) {
             deltagraph(node);
             toggle = 0;
             oneclick=1;
-            console.log("b");
+//            console.log("b");
         } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             node.classed("selected", false);
             oneclick = 0;
-            console.log("c");
+//            console.log("c");
         } else {
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             node.classed("selected", true);
             deltagraph(node);
-            console.log("d");
+//            console.log("d");
             toggle = 0;
             oneclick=1;
         }
@@ -235,45 +235,79 @@ d3.json("graph.json", function(error, graph) {
     var windowgraph = svg
         .append("rect")
         .attr("class", "background")
+        .attr("x",500)
+        .attr("y",80)
+        .attr("width",graphWidth*1.5)
+        .attr("height",graphHeight*1.5)
+        .attr("fill","orange")
+        .style("opacity",0)
+        .transition()
         .attr("x",600)
         .attr("y",100)
+        .style("opacity",1)
         .attr("width",graphWidth)
-        .attr("height",graphHeight)
-        .attr("fill","red");
+        .attr("height",graphHeight);
 
+
+//        function deltagraph (node){
+//            pickupdata(dataSet,node.node().__data__.id)
+//            drawGraph(dataSet,node.node().__data__.id)
+//        };
+//        var path_var=0;
+//        function pickupdata(dataSet,id){
+//            var dataSet = [];
+//            plotpoint=plotdata[id].length;
+//            for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
+//                dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
+//            }
+//            console.log(dataSet)
+//            d3.select("svg").selectAll("path").remove();
+//            drawGraph(dataSet,id);
+//        };
 
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
             drawGraph(dataSet,node.node().__data__.id)
         };
+
+        var nulldata=null
         var path_var=0;
         function pickupdata(dataSet,id){
             var dataSet = [];
+            var nulldata=[];
+//            var olddata=dataSet.length
             plotpoint=plotdata[id].length;
             for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
+                nulldata.push([plotdata[id][i]["x"],0]);
             }
-            console.log(dataSet.length)
+//            dataSet.shift(olddata)
+//            console.log(id)
             d3.select("svg").selectAll("path").remove();
-            drawGraph(dataSet,id);
+            drawGraph(dataSet,nulldata,id);
         };
 
 // 꺾은선 그래프의 좌표를 계산하는 메서드
 
-        function drawGraph(dataSet,nodeid) {
+        function drawGraph(dataSet,nulldata,nodeid) {
             var delta_k = d3.svg.line()	// svg의 선
                 .x(function (d, i) {
                     return d[0]*graphWidth/19.9 + windowoffsetx;	// X 좌표는 표시 순서×간격
                 })
                 .y(function (d, i) {
-                    return graphHeight - (d[1]*graphHeight)+windowoffsety;	// 데이터로부터 Y 좌표 빼기
+                    return graphHeight*0.9 - (d[1]*0.8*graphHeight)+windowoffsety;	// 데이터로부터 Y 좌표 빼기
                 })
 
-            d3.select("#k_line").remove();
+
             // 꺾은선 그래프 그리기
             var lineElements = svg.append("path")
                 .attr("class", "line")
                 .attr("id","#k_line")
+                .style("opacity",0)
+//                .attr("transform", "translate(0,0)")
+//                .attr("d", delta_k(nulldata))
+                .transition()
+                .style("opacity",1)
                 .attr("d", delta_k(dataSet))
         };
     })
