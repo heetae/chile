@@ -28,6 +28,7 @@ function dragended(d) {
 var dblclick_timer = false;
 
 d3.json("graph.json", function(error, graph) {
+
     d3.json("transition.json", function(error, plotdata) {
 
     graph.nodes.forEach(function (d) { // nodes coordinate scaling
