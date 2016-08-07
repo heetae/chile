@@ -66,11 +66,6 @@ d3.json("graph.json", function(error, graph) {
             linksElements.classed("selected",true);
             toggle = 0;
             oneclick = 0;
-            d3.select("svg").selectAll("path").remove(); // clear graph
-            nodeElements.style("opacity", 1).classed("selected",false); // clear double-cick-connected
-            linksElements.style("opacity", 1);  // clear double-cick-connected
-            toggle = 0;                          // clear double-cick-connected
-            oneclick = 0;                         // clear double-cick-connected
         });
 
 
@@ -161,6 +156,25 @@ d3.json("graph.json", function(error, graph) {
     }
     // ============ Toggle highlighting end
     //var selectednode=null;
+    //
+    // function clicked() {
+    //     //selectednode=d3.select(this)
+    //     if (dblclick_timer) {
+    //         clearTimeout(dblclick_timer)
+    //         dblclick_timer = false
+    //         // double click code code comes here
+    //         console.log("double click fired")
+    //     } else {
+    //         dblclick_timer = setTimeout(function(){
+    //             dblclick_timer = false
+    //             // single click code code comes here
+    //             console.log("one click fired");
+    //         }, 250)
+    //
+    //         //Reduce the op
+    //
+    //     }
+    // }
 
     function clicked() {
         var tmp = d3.select(this);
@@ -179,41 +193,39 @@ d3.json("graph.json", function(error, graph) {
             }, 250)}
         }
 
-        function choice(node){
-            console.log(node.style("fill"))
-            if (toggle == 1 && oneclick ==1) { //when connected-mode
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                toggle = 0;
-                oneclick = 0;
-                d3.select("svg").selectAll("path").remove(); // clear graph
-                console.log("a");
-            } else if (toggle == 0 && oneclick ==0){ // when select one while not connected, not selected
-                //Put them back to opacity=1
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", true);
-                deltagraph(node);
-                toggle = 0;
-                oneclick=1;
-                console.log("b");
-            } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){ //when selected, select 'selected'
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", false);
-                oneclick = 0;
-                d3.select("svg").selectAll("path").remove(); // clear graph
-                console.log("c");
-            } else { // when selected, select 'not-selected'
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", true);
-                deltagraph(node);
-                console.log("d");
-                toggle = 0;
-                oneclick=1;
-            }
+    function choice(node){
+        console.log(node.style("fill"))
+        if (toggle == 1 && oneclick ==1) {
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            toggle = 0;
+            oneclick = 0;
+           // console.log("a");
+        } else if (toggle == 0 && oneclick ==0){
+            //Put them back to opacity=1
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            deltagraph(node);
+            toggle = 0;
+            oneclick=1;
+           // console.log("b");
+        } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", false);
+            oneclick = 0;
+           // console.log("c");
+        } else {
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            deltagraph(node);
+           // console.log("d");
+            toggle = 0;
+            oneclick=1;
         }
+    }
 
         var graphWidth = 320;	// SVG 요소의 넓이
         var graphHeight = 240;	// SVG 요소의 높이
