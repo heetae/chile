@@ -147,6 +147,9 @@ d3.json("graph.json", function(error, graph) {
             });
             //Reduce the op
             d3.select(this).classed("selected", true);
+
+            var tmp = d3.select(this);
+            deltagraph(tmp);
             toggle = 1;
             oneclick = 1;
         } else {
@@ -154,6 +157,7 @@ d3.json("graph.json", function(error, graph) {
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
+            d3.select("svg").selectAll("path").remove(); // clear graph
             toggle = 0;
             oneclick = 0;
         }
