@@ -27,7 +27,7 @@ function dragended(d) {
 
 var dblclick_timer = false;
 
-d3.json("graph.json", function(error, graph) {
+d3.json("graph_info.json", function(error, graph) {
 
     d3.json("transition.json", function(error, plotdata) {
 
@@ -184,6 +184,7 @@ d3.json("graph.json", function(error, graph) {
         }
 
         function choice(node){
+            // kd=node.node().__data__;
             console.log(node.style("fill"))
             if (toggle == 1 && oneclick ==1) { //when connected-mode
                 nodeElements.style("opacity", 1).classed("selected",false);
@@ -201,6 +202,7 @@ d3.json("graph.json", function(error, graph) {
                 toggle = 0;
                 oneclick=1;
                 console.log("b");
+                // console.log(kd.name);
             } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){ //when selected, select 'selected'
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
@@ -261,8 +263,14 @@ d3.json("graph.json", function(error, graph) {
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
             drawGraph(dataSet,node.node().__data__.id)
+            text_name(dataSet,node.node().__data__.name)
+            // console.log(node.node().__data__.name)
         };
 
+        function text_name(dataSet,name) {
+            console.log("text name")
+            console.log(name)
+        }
         var nulldata=null
         var path_var=0;
         function pickupdata(dataSet,id){
@@ -301,7 +309,7 @@ d3.json("graph.json", function(error, graph) {
 //                .attr("d", delta_k(nulldata))
                 .transition()
                 .style("opacity",1)
-                .attr("d", delta_k(dataSet))
+                .attr("d", delta_k(dataSet));
         };
     })
 });
