@@ -157,6 +157,7 @@ d3.json("graph_info.json", function(error, graph) {
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
+            d3.select("#node_tag").remove();
             d3.select("svg").selectAll("path").remove(); // clear graph
             toggle = 0;
             oneclick = 0;
@@ -243,36 +244,39 @@ d3.json("graph_info.json", function(error, graph) {
         .attr("width",graphWidth)
         .attr("height",graphHeight);
 
-
-//        function deltagraph (node){
-//            pickupdata(dataSet,node.node().__data__.id)
-//            drawGraph(dataSet,node.node().__data__.id)
-//        };
-//        var path_var=0;
-//        function pickupdata(dataSet,id){
-//            var dataSet = [];
-//            plotpoint=plotdata[id].length;
-//            for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
-//                dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
-//            }
-//            console.log(dataSet)
-//            d3.select("svg").selectAll("path").remove();
-//            drawGraph(dataSet,id);
-//        };
-
+    var spec_name=svg
+        .append("text")
+        .attr("class","spec_label")
+        .attr("x",600)
+        .attr("y",100)
+        .style("opacity",0)
+        .style("font-size",40)
+        .transition()
+        .style("font-size",18)
+        .attr("x",600)
+        .attr("y",100)
+        .style("opacity",1)
+        .text("Name: ")
+//
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
-            drawGraph(dataSet,node.node().__data__.id)
-            text_name(dataSet,node.node().__data__.name)
-            // console.log(node.node().__data__.name)
+            text_name(node.node().__data__.name)
         };
 
-        function text_name(dataSet,name) {
-            console.log("text name")
-            console.log(name)
+        function text_name(name) {
+            var name_tag=svg.append("text")
+                .attr("id","#node_tag")
+                .text(name)
+                .attr("x",700)
+                .attr("y",100)
+                .attr("class","spec_label");
+            console.log("text name");
+            console.log(name);
         }
+
         var nulldata=null
         var path_var=0;
+
         function pickupdata(dataSet,id){
             var dataSet = [];
             var nulldata=[];
