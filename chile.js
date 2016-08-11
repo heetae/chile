@@ -344,14 +344,14 @@ d3.json("graph_info.json", function(error, graph) {
                 .attr("class","spec_label")
                 .style("fill","#dc143c")
                 .attr("opacity",1);
-
-            var region_tag=svg.append("text")
-                .text(node.node().__data__.region)
-                .attr("x",800)
-                .attr("y",125)
-                .attr("class","spec_label")
-                .style("fill","#dc143c")
-                .attr("opacity",1);
+            //
+            // var region_tag=svg.append("text")
+            //     .text(node.node().__data__.region)
+            //     .attr("x",800)
+            //     .attr("y",125)
+            //     .attr("class","spec_label")
+            //     .style("fill","#dc143c")
+            //     .attr("opacity",1);
 
         }
 
