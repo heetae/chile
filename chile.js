@@ -66,6 +66,7 @@ d3.json("graph_info.json", function(error, graph) {
             linksElements.classed("selected",true);
             toggle = 0;
             oneclick = 0;
+            d3.select("#node_tag").remove();
             d3.select("svg").selectAll("path").remove(); // clear graph
             nodeElements.style("opacity", 1).classed("selected",false); // clear double-cick-connected
             linksElements.style("opacity", 1);  // clear double-cick-connected
@@ -135,7 +136,6 @@ d3.json("graph_info.json", function(error, graph) {
     function connectedNodes() {
         //nodeElements.classed("selected",false);
         if (toggle == 0) {
-            console.log("connected ok")
             //Reduce the opacity of all but the neighbouring nodes
             d = d3.select(this).node().__data__;
             nodeElements.style("opacity", function (o) {
@@ -153,7 +153,6 @@ d3.json("graph_info.json", function(error, graph) {
             toggle = 1;
             oneclick = 1;
         } else {
-            console.log("connected end")
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
@@ -173,27 +172,26 @@ d3.json("graph_info.json", function(error, graph) {
             clearTimeout(dblclick_timer)
             dblclick_timer = false
             // double click code code comes here
-            console.log("double click fired")
+            // console.log("double click fired")
         } else {
 
             dblclick_timer = setTimeout(function(){
                 dblclick_timer = false
                 // single click code code comes here
-                console.log("one click fired");
+                // console.log("one click fired");
                 choice(tmp)
             }, 250)}
         }
 
         function choice(node){
-            // kd=node.node().__data__;
-            console.log(node.style("fill"))
             if (toggle == 1 && oneclick ==1) { //when connected-mode
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
                 toggle = 0;
                 oneclick = 0;
+                d3.select("#node_tag").remove() // clear node_name
                 d3.select("svg").selectAll("path").remove(); // clear graph
-                console.log("a");
+                // console.log("a");
             } else if (toggle == 0 && oneclick ==0){ // when select one while not connected, not selected
                 //Put them back to opacity=1
                 nodeElements.style("opacity", 1).classed("selected",false);
@@ -202,21 +200,21 @@ d3.json("graph_info.json", function(error, graph) {
                 deltagraph(node);
                 toggle = 0;
                 oneclick=1;
-                console.log("b");
-                // console.log(kd.name);
+                // console.log("b");
             } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){ //when selected, select 'selected'
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
                 node.classed("selected", false);
                 oneclick = 0;
+                d3.select("#node_tag").remove() // clear node_name
                 d3.select("svg").selectAll("path").remove(); // clear graph
-                console.log("c");
+                // console.log("c");
             } else { // when selected, select 'not-selected'
                 nodeElements.style("opacity", 1).classed("selected",false);
                 linksElements.style("opacity", 1);
                 node.classed("selected", true);
                 deltagraph(node);
-                console.log("d");
+                // console.log("d");
                 toggle = 0;
                 oneclick=1;
             }
@@ -226,52 +224,135 @@ d3.json("graph_info.json", function(error, graph) {
         var graphHeight = 240;	// SVG 요소의 높이
         var dataSet = [];	// 데이터셋
         var windowoffsetx = 600
-        var windowoffsety = 100
+        var windowoffsety = 130
 
-    var windowgraph = svg
-        .append("rect")
-        .attr("class", "background")
-        .attr("x",500)
-        .attr("y",80)
-        .attr("width",graphWidth*1.5)
-        .attr("height",graphHeight*1.5)
-        .attr("fill","orange")
-        .style("opacity",0)
-        .transition()
-        .attr("x",600)
-        .attr("y",100)
-        .style("opacity",1)
-        .attr("width",graphWidth)
-        .attr("height",graphHeight);
+        var windowgraph = svg
+            .append("rect")
+            .attr("class", "background")
+            .attr("x",500)
+            .attr("y",90)
+            .attr("width",graphWidth*1.5)
+            .attr("height",graphHeight*1.5)
+            .attr("fill","lightgrey")
+            .style("opacity",0)
+            .transition()
+            .attr("x",600)
+            .attr("y",130)
+            .style("opacity",0.8)
+            .attr("width",graphWidth)
+            .attr("height",graphHeight);
 
-    var spec_name=svg
-        .append("text")
-        .attr("class","spec_label")
-        .attr("x",600)
-        .attr("y",100)
-        .style("opacity",0)
-        .style("font-size",40)
-        .transition()
-        .style("font-size",18)
-        .attr("x",600)
-        .attr("y",100)
-        .style("opacity",1)
-        .text("Name: ")
-//
+        var legend_name=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",600)
+            .attr("y",125)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Basin stability transition: ");
+
+        var title_bar=svg
+            .append("rect")
+            .attr("class", "background")
+            .attr("x",0)
+            .attr("y",0)
+            .attr("width",width)
+            .attr("height",50)
+            .style("opacity",0.8)
+            .attr("fill","darkslategray");
+
+        var title=svg
+            .append("text")
+            .attr("class","spec_label")
+            .style("fill","white")
+            .attr("x",20)
+            .attr("y",30)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",20)
+            .style("opacity",1)
+            .style("fill","white")
+            .style("fill-opacity",1)
+            .text("Synchronization Stability of Chilean Power Grid");
+
+        var legend_node_circle=svg
+            .attr("class", "nodes")
+            .append("circle")
+            .attr("cx", 620)
+            .attr("cy", 80)
+            .attr("r", 40)
+            .attr("opacity", 0)
+            .transition()
+            .attr("r", 6)
+            .attr("opacity", 1);
+
+        var legend_node_text=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",640)
+            .attr("y",85)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Node: 420 ");
+
+        var legend_link_line=svg
+            .append("line")
+            .style("stroke", "#666666")
+            .attr("opacity", 0)
+            .attr("x1", 605)
+            .attr("y1", 100)
+            .attr("x2", 635)
+            .attr("y2", 100)
+            .transition()
+            .attr("opacity", 1);
+
+        var legend_link_text=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",640)
+            .attr("y",105)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Edge: 573");
+
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
-            text_name(node.node().__data__.name)
+            d3.select("#node_tag").remove() // clear node_name
+            text_name(node);
+            console.log(node.node().__data__);
+            // text_name(node.node().__data__.name,node.node().__data__.region,node.node().__data__.province)
         };
 
-        function text_name(name) {
+        function text_name(node) {
+            // var name=node.node().__data__.name;
+            // var region=node.node().__data__.name
             var name_tag=svg.append("text")
-                .attr("id","#node_tag")
-                .text(name)
-                .attr("x",700)
-                .attr("y",100)
-                .attr("class","spec_label");
-            console.log("text name");
-            console.log(name);
+                .attr("id","node_tag")
+                .text(node.node().__data__.name)
+                .attr("x",800)
+                .attr("y",125)
+                .attr("class","spec_label")
+                .style("fill","#dc143c")
+                .attr("opacity",1);
+
+            var region_tag=svg.append("text")
+                .text(node.node().__data__.region)
+                .attr("x",800)
+                .attr("y",125)
+                .attr("class","spec_label")
+                .style("fill","#dc143c")
+                .attr("opacity",1);
+
         }
 
         var nulldata=null
@@ -280,14 +361,11 @@ d3.json("graph_info.json", function(error, graph) {
         function pickupdata(dataSet,id){
             var dataSet = [];
             var nulldata=[];
-//            var olddata=dataSet.length
             plotpoint=plotdata[id].length;
             for (var i=0; i<plotpoint; i++) {	// 최초의 데이터만 처리
                 dataSet.push([plotdata[id][i]["x"],plotdata[id][i]["y"]]);	// 가로 한 줄 모두를 한꺼번에 넣음
                 nulldata.push([plotdata[id][i]["x"],0]);
             }
-//            dataSet.shift(olddata)
-//            console.log(id)
             d3.select("svg").selectAll("path").remove();
             drawGraph(dataSet,nulldata,id);
         };

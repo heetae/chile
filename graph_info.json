@@ -3,2524 +3,4204 @@
     "graph": [], 
     "nodes": [
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Concepcion", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4175.044", 
             "x": "588.85406", 
-            "id": "344", 
-            "name": "Concepcion"
+            "id": "344"
         }, 
         {
+            "province": "Cauquenes", 
+            "kind": "Substation", 
+            "name": "La Vega", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "4860.0", 
             "x": "870.0", 
-            "id": "0", 
-            "name": "La Vega"
+            "id": "0"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Power plant", 
+            "name": "Guacolda", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "9331.515", 
             "x": "1397.7334", 
-            "id": "346", 
-            "name": "Guacolda"
+            "id": "346"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Power plant", 
+            "name": "Pilmaiquen", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "1928.5481", 
             "x": "933.66345", 
-            "id": "347", 
-            "name": "Pilmaiquen"
+            "id": "347"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Substation", 
+            "name": "Saladillo", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6633.6113", 
             "x": "1936.7616", 
-            "id": "340", 
-            "name": "Saladillo"
+            "id": "340"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Talcahuano", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4261.9844", 
             "x": "465.03638", 
-            "id": "341", 
-            "name": "Talcahuano"
+            "id": "341"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Power plant", 
+            "name": "Central Quellon", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "262.17273", 
             "x": "406.98694", 
-            "id": "342", 
-            "name": "Central Quellon"
+            "id": "342"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Power plant", 
+            "name": "Central Lebu", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3546.6355", 
             "x": "313.3643", 
-            "id": "343", 
-            "name": "Central Lebu"
+            "id": "343"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "La Esperanza", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5606.399", 
             "x": "1359.3627", 
-            "id": "348", 
-            "name": "La Esperanza"
+            "id": "348"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Loma Colorada", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4018.0615", 
             "x": "700.9239", 
-            "id": "349", 
-            "name": "Loma Colorada"
+            "id": "349"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Los Vilos", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7191.647", 
             "x": "1309.3624", 
-            "id": "298", 
-            "name": "Los Vilos"
+            "id": "298"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "Quelentaro", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5750.0", 
             "x": "1260.0", 
-            "id": "299", 
-            "name": "Quelentaro"
+            "id": "299"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Planta Maule", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5114.9746", 
             "x": "935.6763", 
-            "id": "296", 
-            "name": "Planta Maule"
+            "id": "296"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Vallenar", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9123.398", 
             "x": "1612.7512", 
-            "id": "297", 
-            "name": "Vallenar"
+            "id": "297"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Algarrobo", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "9060.0", 
             "x": "1370.0", 
-            "id": "294", 
-            "name": "Algarrobo"
+            "id": "294"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Power plant", 
+            "name": "Los Quilos", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6694.63", 
             "x": "1879.3152", 
-            "id": "295", 
-            "name": "Los Quilos"
+            "id": "295"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Coronel", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3934.2986", 
             "x": "498.9102", 
-            "id": "292", 
-            "name": "Coronel"
+            "id": "292"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "Portezuelo", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5658.7036", 
             "x": "1320.7567", 
-            "id": "293", 
-            "name": "Portezuelo"
+            "id": "293"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Chiloe", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "800.0", 
             "x": "240.0", 
-            "id": "290", 
-            "name": "Chiloe"
+            "id": "290"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Bollenar", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6202.0166", 
             "x": "1361.8533", 
-            "id": "291", 
-            "name": "Bollenar"
+            "id": "291"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Ochagavia", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6308.0327", 
             "x": "1913.5984", 
-            "id": "199", 
-            "name": "Ochagavia"
+            "id": "199"
         }, 
         {
+            "province": "Colchagua", 
+            "kind": "Substation", 
+            "name": "Paniahue", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5563.9233", 
             "x": "1426.04", 
-            "id": "198", 
-            "name": "Paniahue"
+            "id": "198"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Marquesa", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8346.773", 
             "x": "1505.7759", 
-            "id": "195", 
-            "name": "Marquesa"
+            "id": "195"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "San Clemente", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4763.944", 
             "x": "1419.0004", 
-            "id": "194", 
-            "name": "San Clemente"
+            "id": "194"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Cabrero", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3893.2024", 
             "x": "956.1764", 
-            "id": "197", 
-            "name": "Cabrero"
+            "id": "197"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "San Fco Mostazal", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5930.2236", 
             "x": "1617.7086", 
-            "id": "196", 
-            "name": "San Fco Mostazal"
+            "id": "196"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Los Maitenes", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6514.452", 
             "x": "1836.1205", 
-            "id": "191", 
-            "name": "Los Maitenes"
+            "id": "191"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Power plant", 
+            "name": "Cenizas", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "9820.0", 
             "x": "1670.0", 
-            "id": "190", 
-            "name": "Cenizas"
+            "id": "190"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "El Salto", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6382.2793", 
             "x": "1844.8231", 
-            "id": "193", 
-            "name": "El Salto"
+            "id": "193"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Romeral", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8580.0", 
             "x": "1460.0", 
-            "id": "192", 
-            "name": "Romeral"
+            "id": "192"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Substation", 
+            "name": "San Rafael", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "5172.907", 
             "x": "1354.4279", 
-            "id": "270", 
-            "name": "San Rafael"
+            "id": "270"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "El Eden", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9172.715", 
             "x": "1664.5228", 
-            "id": "271", 
-            "name": "El Eden"
+            "id": "271"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Power plant", 
+            "name": "Central Curacautin", 
+            "region": "Araucania", 
+            "io": 2.255813953, 
             "y": "3126.6355", 
             "x": "1313.3641", 
-            "id": "272", 
-            "name": "Central Curacautin"
+            "id": "272"
         }, 
         {
+            "province": "San Felipe", 
+            "kind": "Power plant", 
+            "name": "Chacabuquito", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6653.1123", 
             "x": "1766.8599", 
-            "id": "273", 
-            "name": "Chacabuquito"
+            "id": "273"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Mahns", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4168.239", 
             "x": "754.3102", 
-            "id": "274", 
-            "name": "Mahns"
+            "id": "274"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "La Higuera", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5594.536", 
             "x": "1885.2212", 
-            "id": "275", 
-            "name": "La Higuera"
+            "id": "275"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Chumaquito", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5652.1235", 
             "x": "1710.9879", 
-            "id": "276", 
-            "name": "Chumaquito"
+            "id": "276"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Power plant", 
+            "name": "Queltehues", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "5869.741", 
             "x": "2016.4758", 
-            "id": "277", 
-            "name": "Queltehues"
+            "id": "277"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Horcones", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3852.4463", 
             "x": "462.75906", 
-            "id": "278", 
-            "name": "Horcones"
+            "id": "278"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Huellelhue", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2280.0", 
             "x": "630.0", 
-            "id": "279", 
-            "name": "Huellelhue"
+            "id": "279"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "San Cristobal", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6385.3965", 
             "x": "1924.368", 
-            "id": "108", 
-            "name": "San Cristobal"
+            "id": "108"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Puerto Varas", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1470.0", 
             "x": "600.0", 
-            "id": "109", 
-            "name": "Puerto Varas"
+            "id": "109"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Marga Marga", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6462.052", 
             "x": "1337.6484", 
-            "id": "102", 
-            "name": "Marga Marga"
+            "id": "102"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Coya", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "5775.245", 
             "x": "1900.4775", 
-            "id": "103", 
-            "name": "Coya"
+            "id": "103"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Polpaico", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "6445.795", 
             "x": "1643.1542", 
-            "id": "100", 
-            "name": "Polpaico"
+            "id": "100"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Cipreses", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4969.6416", 
             "x": "1713.661", 
-            "id": "101", 
-            "name": "Cipreses"
+            "id": "101"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Laja", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3780.4685", 
             "x": "754.5678", 
-            "id": "106", 
-            "name": "Laja"
+            "id": "106"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Power plant", 
+            "name": "Cholguan", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3961.152", 
             "x": "751.223", 
-            "id": "107", 
-            "name": "Cholguan"
+            "id": "107"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "Marchigue", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5630.707", 
             "x": "1237.4598", 
-            "id": "104", 
-            "name": "Marchigue"
+            "id": "104"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Power plant", 
+            "name": "Guayacan", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "6053.1636", 
             "x": "1976.7435", 
-            "id": "105", 
-            "name": "Guayacan"
+            "id": "105"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "San Vicente", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4150.626", 
             "x": "498.86713", 
-            "id": "39", 
-            "name": "San Vicente"
+            "id": "39"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Hernan Fuentes", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10009.533", 
             "x": "1715.0007", 
-            "id": "38", 
-            "name": "Hernan Fuentes"
+            "id": "38"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Melipulli", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1240.0", 
             "x": "610.0", 
-            "id": "33", 
-            "name": "Melipulli"
+            "id": "33"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Campanario", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4060.0", 
             "x": "1120.0", 
-            "id": "32", 
-            "name": "Campanario"
+            "id": "32"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "La Calera", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6821.435", 
             "x": "1463.5946", 
-            "id": "31", 
-            "name": "La Calera"
+            "id": "31"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Santa Maria", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "3891.6516", 
             "x": "566.2228", 
-            "id": "30", 
-            "name": "Santa Maria"
+            "id": "30"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Pichirropulli", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2170.0", 
             "x": "700.0", 
-            "id": "37", 
-            "name": "Pichirropulli"
+            "id": "37"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Charrua", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4040.1897", 
             "x": "937.96497", 
-            "id": "36", 
-            "name": "Charrua"
+            "id": "36"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "Central Punitaqui", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "7780.0", 
             "x": "1512.6001", 
-            "id": "35", 
-            "name": "Central Punitaqui"
+            "id": "35"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Temuco Sur", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2890.0", 
             "x": "810.0", 
-            "id": "34", 
-            "name": "Temuco Sur"
+            "id": "34"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Celco", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5034.0234", 
             "x": "848.00775", 
-            "id": "339", 
-            "name": "Celco"
+            "id": "339"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Lo Miranda", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5772.74", 
             "x": "1537.6224", 
-            "id": "338", 
-            "name": "Lo Miranda"
+            "id": "338"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Laguna Verde", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6426.318", 
             "x": "1142.3447", 
-            "id": "335", 
-            "name": "Laguna Verde"
+            "id": "335"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Casablanca", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6358.619", 
             "x": "1360.3899", 
-            "id": "334", 
-            "name": "Casablanca"
+            "id": "334"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Los Colorados", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9420.0", 
             "x": "1570.0", 
-            "id": "337", 
-            "name": "Los Colorados"
+            "id": "337"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Alto del Carmen", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9193.886", 
             "x": "1602.726", 
-            "id": "336", 
-            "name": "Alto del Carmen"
+            "id": "336"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Valdivia", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2313.3738", 
             "x": "547.71106", 
-            "id": "331", 
-            "name": "Valdivia"
+            "id": "331"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "La Confluencia", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5500.0", 
             "x": "1880.0", 
-            "id": "330", 
-            "name": "La Confluencia"
+            "id": "330"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Chomeco", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "963.8035", 
             "x": "338.56335", 
-            "id": "333", 
-            "name": "Chomeco"
+            "id": "333"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Tapihue", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6277.6396", 
             "x": "1318.9868", 
-            "id": "332", 
-            "name": "Tapihue"
+            "id": "332"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Power plant", 
+            "name": "Hornitos", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6573.257", 
             "x": "1971.4142", 
-            "id": "345", 
-            "name": "Hornitos"
+            "id": "345"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Power plant", 
+            "name": "Central Traigen", 
+            "region": "Araucania", 
+            "io": 2.255813953, 
             "y": "3228.7305", 
             "x": "677.46045", 
-            "id": "6", 
-            "name": "Central Traigen"
+            "id": "6"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Chagres", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3798.1335", 
             "x": "1047.0582", 
-            "id": "99", 
-            "name": "Chagres"
+            "id": "99"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Tome", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4373.593", 
             "x": "565.26697", 
-            "id": "98", 
-            "name": "Tome"
+            "id": "98"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Substation", 
+            "name": "Los Maquis", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6613.1646", 
             "x": "1866.5134", 
-            "id": "91", 
-            "name": "Los Maquis"
+            "id": "91"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Power plant", 
+            "name": "San Ignacio", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5029.3", 
             "x": "1410.0", 
-            "id": "90", 
-            "name": "San Ignacio"
+            "id": "90"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Central Coronel", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3932.728", 
             "x": "650.41327", 
-            "id": "93", 
-            "name": "Central Coronel"
+            "id": "93"
         }, 
         {
+            "province": "Ranco", 
+            "kind": "Substation", 
+            "name": "La Union", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2060.0", 
             "x": "530.0", 
-            "id": "92", 
-            "name": "La Union"
+            "id": "92"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Quintero", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6595.6743", 
             "x": "1208.4594", 
-            "id": "95", 
-            "name": "Quintero"
+            "id": "95"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "El Peumo", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5924.6143", 
             "x": "1416.6979", 
-            "id": "94", 
-            "name": "El Peumo"
+            "id": "94"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Petroquimicas", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4196.2676", 
             "x": "440.6923", 
-            "id": "97", 
-            "name": "Petroquimicas"
+            "id": "97"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Ranguili", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5419.7285", 
             "x": "1109.7281", 
-            "id": "96", 
-            "name": "Ranguili"
+            "id": "96"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Palmucho", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3414.1904", 
             "x": "1332.7379", 
-            "id": "238", 
-            "name": "Palmucho"
+            "id": "238"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Illapel", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7390.0", 
             "x": "1430.0", 
-            "id": "239", 
-            "name": "Illapel"
+            "id": "239"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "San Javier", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5000.0", 
             "x": "1170.0", 
-            "id": "234", 
-            "name": "San Javier"
+            "id": "234"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Hospital", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6010.7324", 
             "x": "1607.8243", 
-            "id": "235", 
-            "name": "Hospital"
+            "id": "235"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Power plant", 
+            "name": "Nehuenco", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6705.386", 
             "x": "1377.1195", 
-            "id": "236", 
-            "name": "Nehuenco"
+            "id": "236"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Osorno", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1906.5167", 
             "x": "534.7866", 
-            "id": "237", 
-            "name": "Osorno"
+            "id": "237"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Puente Alto", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6018.6353", 
             "x": "1885.9769", 
-            "id": "230", 
-            "name": "Puente Alto"
+            "id": "230"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Los Negros", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1950.0", 
             "x": "840.0", 
-            "id": "231", 
-            "name": "Los Negros"
+            "id": "231"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Incahuasi", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "8786.401", 
             "x": "1472.3558", 
-            "id": "232", 
-            "name": "Incahuasi"
+            "id": "232"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Rucue", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3907.7334", 
             "x": "1269.4784", 
-            "id": "233", 
-            "name": "Rucue"
+            "id": "233"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Lagunillas", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4072.6873", 
             "x": "509.1044", 
-            "id": "1", 
-            "name": "Lagunillas"
+            "id": "1"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Pehuenche", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4890.481", 
             "x": "1535.3647", 
-            "id": "146", 
-            "name": "Pehuenche"
+            "id": "146"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Substation", 
+            "name": "Talca", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5128.616", 
             "x": "1234.6234", 
-            "id": "147", 
-            "name": "Talca"
+            "id": "147"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Latorre", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4221.489", 
             "x": "529.08264", 
-            "id": "144", 
-            "name": "Latorre"
+            "id": "144"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Paillaco", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2200.0", 
             "x": "770.0", 
-            "id": "145", 
-            "name": "Paillaco"
+            "id": "145"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Enlace", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3940.389", 
             "x": "974.2234", 
-            "id": "142", 
-            "name": "Enlace"
+            "id": "142"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Disputada", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6491.1416", 
             "x": "1982.832", 
-            "id": "143", 
-            "name": "Disputada"
+            "id": "143"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Bajo Melipilla", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6120.0", 
             "x": "1430.0", 
-            "id": "140", 
-            "name": "Bajo Melipilla"
+            "id": "140"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Inforsa", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3728.5164", 
             "x": "794.94434", 
-            "id": "141", 
-            "name": "Inforsa"
+            "id": "141"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Cautin", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2850.0", 
             "x": "920.0", 
-            "id": "148", 
-            "name": "Cautin"
+            "id": "148"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Pan de Azucar", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8353.658", 
             "x": "1419.7406", 
-            "id": "149", 
-            "name": "Pan de Azucar"
+            "id": "149"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Santa Rosa", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5954.4546", 
             "x": "1504.4547", 
-            "id": "133", 
-            "name": "Santa Rosa"
+            "id": "133"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Substation", 
+            "name": "Angol", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3519.7285", 
             "x": "789.7283", 
-            "id": "132", 
-            "name": "Angol"
+            "id": "132"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Min Carmen de Andacollo", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8311.871", 
             "x": "1563.911", 
-            "id": "131", 
-            "name": "Min Carmen de Andacollo"
+            "id": "131"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Power plant", 
+            "name": "Los Pinos", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4062.5854", 
             "x": "837.0774", 
-            "id": "130", 
-            "name": "Los Pinos"
+            "id": "130"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "Los Sauces", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "3466.6355", 
             "x": "736.6357", 
-            "id": "137", 
-            "name": "Los Sauces"
+            "id": "137"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Power plant", 
+            "name": "Termopacifico", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "9920.0", 
             "x": "1670.0", 
-            "id": "136", 
-            "name": "Termopacifico"
+            "id": "136"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Colmito", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6755.1675", 
             "x": "1261.3816", 
-            "id": "135", 
-            "name": "Colmito"
+            "id": "135"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Power plant", 
+            "name": "Central Calle Calle", 
+            "region": "Los Rios", 
+            "io": 2.255813953, 
             "y": "2438.173", 
             "x": "609.2014", 
-            "id": "134", 
-            "name": "Central Calle Calle"
+            "id": "134"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "Ancoa", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "4882.416", 
             "x": "1319.474", 
-            "id": "139", 
-            "name": "Ancoa"
+            "id": "139"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "Quirihue", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4301.6533", 
             "x": "761.5302", 
-            "id": "138", 
-            "name": "Quirihue"
+            "id": "138"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "Cerro Calera", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6740.0", 
             "x": "1570.0", 
-            "id": "24", 
-            "name": "Cerro Calera"
+            "id": "24"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Purranque", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1760.0", 
             "x": "560.0", 
-            "id": "25", 
-            "name": "Purranque"
+            "id": "25"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Power plant", 
+            "name": "Antilhue", 
+            "region": "Los Rios", 
+            "io": 2.255813953, 
             "y": "2244.0232", 
             "x": "518.00775", 
-            "id": "26", 
-            "name": "Antilhue"
+            "id": "26"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "C San Fco Mostazal", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5904.534", 
             "x": "1708.055", 
-            "id": "27", 
-            "name": "C San Fco Mostazal"
+            "id": "27"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "Linares", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "4763.474", 
             "x": "1195.0016", 
-            "id": "20", 
-            "name": "Linares"
+            "id": "20"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Machali", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5658.3174", 
             "x": "1490.4585", 
-            "id": "21", 
-            "name": "Machali"
+            "id": "21"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Power plant", 
+            "name": "Volcan", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "5910.0", 
             "x": "2090.0", 
-            "id": "22", 
-            "name": "Volcan"
+            "id": "22"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Power plant", 
+            "name": "Central Diego de Almagro", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "10428.612", 
             "x": "1976.1453", 
-            "id": "23", 
-            "name": "Central Diego de Almagro"
+            "id": "23"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Bio Bio", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4020.519", 
             "x": "473.6088", 
-            "id": "28", 
-            "name": "Bio Bio"
+            "id": "28"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Chiguayante", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4132.239", 
             "x": "656.0685", 
-            "id": "29", 
-            "name": "Chiguayante"
+            "id": "29"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Magnetita", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9308.91", 
             "x": "2078.9097", 
-            "id": "407", 
-            "name": "Magnetita"
+            "id": "407"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Alto Jahuel", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6114.444", 
             "x": "1752.4427", 
-            "id": "406", 
-            "name": "Alto Jahuel"
+            "id": "406"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Metro", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6408.394", 
             "x": "1771.3534", 
-            "id": "405", 
-            "name": "Metro"
+            "id": "405"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "La Manga", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5883.2383", 
             "x": "1350.1763", 
-            "id": "404", 
-            "name": "La Manga"
+            "id": "404"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Antillanca", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1870.0", 
             "x": "820.0", 
-            "id": "403", 
-            "name": "Antillanca"
+            "id": "403"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Power plant", 
+            "name": "Capullo", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "1771.4519", 
             "x": "866.33655", 
-            "id": "402", 
-            "name": "Capullo"
+            "id": "402"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Power plant", 
+            "name": "Nueva Aldea", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4251.844", 
             "x": "910.6515", 
-            "id": "401", 
-            "name": "Nueva Aldea"
+            "id": "401"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Tilcoco", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5701.44", 
             "x": "1547.667", 
-            "id": "400", 
-            "name": "Tilcoco"
+            "id": "400"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Maria Dolores", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3820.0", 
             "x": "920.0", 
-            "id": "409", 
-            "name": "Maria Dolores"
+            "id": "409"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "El Indio", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8470.0", 
             "x": "1980.0", 
-            "id": "408", 
-            "name": "El Indio"
+            "id": "408"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Loreto", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5811.0215", 
             "x": "1457.3181", 
-            "id": "379", 
-            "name": "Loreto"
+            "id": "379"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Power plant", 
+            "name": "Totoral", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "7561.9917", 
             "x": "1149.6216", 
-            "id": "378", 
-            "name": "Totoral"
+            "id": "378"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Central Constitucion", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5190.0", 
             "x": "900.0", 
-            "id": "371", 
-            "name": "Central Constitucion"
+            "id": "371"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Plantas", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9823.822", 
             "x": "1961.2355", 
-            "id": "370", 
-            "name": "Plantas"
+            "id": "370"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Ralco", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3350.0", 
             "x": "1460.0", 
-            "id": "373", 
-            "name": "Ralco"
+            "id": "373"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Power plant", 
+            "name": "Alfalfal", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "6320.589", 
             "x": "2068.5894", 
-            "id": "372", 
-            "name": "Alfalfal"
+            "id": "372"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Quintay", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6440.5493", 
             "x": "1223.8052", 
-            "id": "375", 
-            "name": "Quintay"
+            "id": "375"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Lo Prado", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5978.3237", 
             "x": "1844.9374", 
-            "id": "374", 
-            "name": "Lo Prado"
+            "id": "374"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Copiapo", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9966.974", 
             "x": "1767.5333", 
-            "id": "377", 
-            "name": "Copiapo"
+            "id": "377"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Substation", 
+            "name": "Curacautin", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3179.7285", 
             "x": "1260.2719", 
-            "id": "376", 
-            "name": "Curacautin"
+            "id": "376"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Candelaria", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "5903.054", 
             "x": "1800.4238", 
-            "id": "393", 
-            "name": "Candelaria"
+            "id": "393"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Power plant", 
+            "name": "Lican", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "1850.0", 
             "x": "900.0", 
-            "id": "392", 
-            "name": "Lican"
+            "id": "392"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "Bellavista", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4282.389", 
             "x": "692.1925", 
-            "id": "88", 
-            "name": "Bellavista"
+            "id": "88"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "Central Monte Patria", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "7924.365", 
             "x": "1631.2698", 
-            "id": "89", 
-            "name": "Central Monte Patria"
+            "id": "89"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "Chillan", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4225.035", 
             "x": "992.3115", 
-            "id": "397", 
-            "name": "Chillan"
+            "id": "397"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Carmen de Andacollo", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8254.186", 
             "x": "1572.1819", 
-            "id": "396", 
-            "name": "Carmen de Andacollo"
+            "id": "396"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Rio Bonito", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1810.0", 
             "x": "1010.0", 
-            "id": "395", 
-            "name": "Rio Bonito"
+            "id": "395"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Lo Aguirre", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6016.0737", 
             "x": "1786.7819", 
-            "id": "394", 
-            "name": "Lo Aguirre"
+            "id": "394"
         }, 
         {
+            "province": "San Felipe", 
+            "kind": "Substation", 
+            "name": "Las Vegas", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6581.807", 
             "x": "1653.3843", 
-            "id": "82", 
-            "name": "Las Vegas"
+            "id": "82"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Frutillar", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1560.0", 
             "x": "580.0", 
-            "id": "83", 
-            "name": "Frutillar"
+            "id": "83"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Nihue", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5867.262", 
             "x": "1265.8097", 
-            "id": "80", 
-            "name": "Nihue"
+            "id": "80"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Abanico", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3841.7932", 
             "x": "1341.4723", 
-            "id": "398", 
-            "name": "Abanico"
+            "id": "398"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Power plant", 
+            "name": "Central Punta Colorada", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "8704.607", 
             "x": "1590.9465", 
-            "id": "86", 
-            "name": "Central Punta Colorada"
+            "id": "86"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Power plant", 
+            "name": "Central Candelaria", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "5901.0728", 
             "x": "1875.7727", 
-            "id": "87", 
-            "name": "Central Candelaria"
+            "id": "87"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Substation", 
+            "name": "Diego de Almagro", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10452.305", 
             "x": "1905.8098", 
-            "id": "84", 
-            "name": "Diego de Almagro"
+            "id": "84"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "Central Monte Redondo", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "8105.4023", 
             "x": "1313.2413", 
-            "id": "85", 
-            "name": "Central Monte Redondo"
+            "id": "85"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Alameda", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5827.9873", 
             "x": "1545.6992", 
-            "id": "7", 
-            "name": "Alameda"
+            "id": "7"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "El Empalme", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1157.0388", 
             "x": "510.5054", 
-            "id": "245", 
-            "name": "El Empalme"
+            "id": "245"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Los Lirios", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5709.933", 
             "x": "1699.9027", 
-            "id": "244", 
-            "name": "Los Lirios"
+            "id": "244"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Caldera", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10050.0", 
             "x": "1510.0", 
-            "id": "247", 
-            "name": "Caldera"
+            "id": "247"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Alonso de Ribera", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4208.5176", 
             "x": "676.61383", 
-            "id": "246", 
-            "name": "Alonso de Ribera"
+            "id": "246"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Substation", 
+            "name": "Maule", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5041.0625", 
             "x": "1245.6195", 
-            "id": "241", 
-            "name": "Maule"
+            "id": "241"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Maipo", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5942.0786", 
             "x": "1765.3901", 
-            "id": "240", 
-            "name": "Maipo"
+            "id": "240"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Minero", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5906.7114", 
             "x": "1948.2338", 
-            "id": "243", 
-            "name": "Minero"
+            "id": "243"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Power plant", 
+            "name": "Central Valdivia", 
+            "region": "Los Rios", 
+            "io": 2.255813953, 
             "y": "2527.462", 
             "x": "573.616", 
-            "id": "242", 
-            "name": "Central Valdivia"
+            "id": "242"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Rancagua", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5806.6807", 
             "x": "1654.0032", 
-            "id": "249", 
-            "name": "Rancagua"
+            "id": "249"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Dos Amigos", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "8905.956", 
             "x": "1453.0361", 
-            "id": "248", 
-            "name": "Dos Amigos"
+            "id": "248"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Substation", 
+            "name": "Potrerillos", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10424.0", 
             "x": "2174.0", 
-            "id": "179", 
-            "name": "Potrerillos"
+            "id": "179"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Punta San Gallan", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "992.3004", 
             "x": "397.4487", 
-            "id": "178", 
-            "name": "Punta San Gallan"
+            "id": "178"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Power plant", 
+            "name": "Pullinque", 
+            "region": "Araucania", 
+            "io": 2.255813953, 
             "y": "2460.0", 
             "x": "1010.0", 
-            "id": "177", 
-            "name": "Pullinque"
+            "id": "177"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Masisa", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3864.9097", 
             "x": "875.5588", 
-            "id": "176", 
-            "name": "Masisa"
+            "id": "176"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Planta Curico", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5281.9976", 
             "x": "1437.6273", 
-            "id": "175", 
-            "name": "Planta Curico"
+            "id": "175"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Barro Blanco", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1844.1222", 
             "x": "584.7023", 
-            "id": "174", 
-            "name": "Barro Blanco"
+            "id": "174"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Power plant", 
+            "name": "Puntilla", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "5972.084", 
             "x": "1984.3956", 
-            "id": "173", 
-            "name": "Puntilla"
+            "id": "173"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Power plant", 
+            "name": "Central Chiloe", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "172.74677", 
             "x": "443.24866", 
-            "id": "172", 
-            "name": "Central Chiloe"
+            "id": "172"
         }, 
         {
+            "province": "Colchagua", 
+            "kind": "Substation", 
+            "name": "Colchagua", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5559.404", 
             "x": "1572.6665", 
-            "id": "171", 
-            "name": "Colchagua"
+            "id": "171"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Temuco", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2980.0", 
             "x": "840.0", 
-            "id": "170", 
-            "name": "Temuco"
+            "id": "170"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "Cocharcas", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4384.696", 
             "x": "646.8303", 
-            "id": "182", 
-            "name": "Cocharcas"
+            "id": "182"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Queilen", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "350.0", 
             "x": "440.0", 
-            "id": "183", 
-            "name": "Queilen"
+            "id": "183"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Agua Negras", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5341.824", 
             "x": "1320.0139", 
-            "id": "180", 
-            "name": "Agua Negras"
+            "id": "180"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Power plant", 
+            "name": "Los Vientos", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6665.4688", 
             "x": "1671.6749", 
-            "id": "2", 
-            "name": "Los Vientos"
+            "id": "2"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Carrera Pinto", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10120.0", 
             "x": "1940.0", 
-            "id": "186", 
-            "name": "Carrera Pinto"
+            "id": "186"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Rivadavia", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8370.0", 
             "x": "1700.0", 
-            "id": "187", 
-            "name": "Rivadavia"
+            "id": "187"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Power plant", 
+            "name": "Arauco", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3906.819", 
             "x": "334.15414", 
-            "id": "184", 
-            "name": "Arauco"
+            "id": "184"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Arenas Blancas", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4011.7366", 
             "x": "542.5085", 
-            "id": "185", 
-            "name": "Arenas Blancas"
+            "id": "185"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Maitencillo", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9201.793", 
             "x": "1482.4717", 
-            "id": "188", 
-            "name": "Maitencillo"
+            "id": "188"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Escuadron", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4058.9265", 
             "x": "631.467", 
-            "id": "189", 
-            "name": "Escuadron"
+            "id": "189"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Atacama Kozan", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9886.178", 
             "x": "1948.7645", 
-            "id": "11", 
-            "name": "Atacama Kozan"
+            "id": "11"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Power plant", 
+            "name": "Machicura", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4839.935", 
             "x": "1375.4302", 
-            "id": "10", 
-            "name": "Machicura"
+            "id": "10"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Estructura 129", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3796.7292", 
             "x": "266.19412", 
-            "id": "13", 
-            "name": "Estructura 129"
+            "id": "13"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "San Vicente de Tagua", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "5601.2974", 
             "x": "1516.2717", 
-            "id": "12", 
-            "name": "San Vicente de Tagua"
+            "id": "12"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Padre las Casas", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2900.0", 
             "x": "700.0", 
-            "id": "15", 
-            "name": "Padre las Casas"
+            "id": "15"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "Nogales", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6845.3477", 
             "x": "1398.252", 
-            "id": "14", 
-            "name": "Nogales"
+            "id": "14"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "Colihue", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5863.3833", 
             "x": "1603.8772", 
-            "id": "17", 
-            "name": "Colihue"
+            "id": "17"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Villarrica", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2640.0", 
             "x": "1050.0", 
-            "id": "16", 
-            "name": "Villarrica"
+            "id": "16"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Curauma", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6279.221", 
             "x": "1411.9658", 
-            "id": "19", 
-            "name": "Curauma"
+            "id": "19"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Lautaro", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3114.88", 
             "x": "938.83997", 
-            "id": "18", 
-            "name": "Lautaro"
+            "id": "18"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Estructura 44", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3805.4045", 
             "x": "412.74823", 
-            "id": "62", 
-            "name": "Estructura 44"
+            "id": "62"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "Sauzalito", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5645.026", 
             "x": "1815.0204", 
-            "id": "322", 
-            "name": "Sauzalito"
+            "id": "322"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "Alcones", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5562.885", 
             "x": "1256.9735", 
-            "id": "323", 
-            "name": "Alcones"
+            "id": "323"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Substation", 
+            "name": "San Jeronimo", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "9030.0", 
             "x": "1460.0", 
-            "id": "320", 
-            "name": "San Jeronimo"
+            "id": "320"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Power plant", 
+            "name": "Aconcagua", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6694.3447", 
             "x": "1973.3634", 
-            "id": "321", 
-            "name": "Aconcagua"
+            "id": "321"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Cerro Blanco", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6030.711", 
             "x": "1708.1666", 
-            "id": "326", 
-            "name": "Cerro Blanco"
+            "id": "326"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Cerro Navia", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6302.2075", 
             "x": "1715.7036", 
-            "id": "327", 
-            "name": "Cerro Navia"
+            "id": "327"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Ejercito", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4332.3745", 
             "x": "620.7791", 
-            "id": "324", 
-            "name": "Ejercito"
+            "id": "324"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Rengo", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5601.9043", 
             "x": "1649.5836", 
-            "id": "325", 
-            "name": "Rengo"
+            "id": "325"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Lebu", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3599.7285", 
             "x": "260.27176", 
-            "id": "328", 
-            "name": "Lebu"
+            "id": "328"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Estructura 103", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6198.9893", 
             "x": "1653.6791", 
-            "id": "329", 
-            "name": "Estructura 103"
+            "id": "329"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Power plant", 
+            "name": "Colbun", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4940.7", 
             "x": "1410.0", 
-            "id": "201", 
-            "name": "Colbun"
+            "id": "201"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Buin", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6128.9253", 
             "x": "1645.045", 
-            "id": "200", 
-            "name": "Buin"
+            "id": "200"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Central Las Vegas", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6331.6836", 
             "x": "1235.8375", 
-            "id": "203", 
-            "name": "Central Las Vegas"
+            "id": "203"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "GNL Quintero", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6821.46", 
             "x": "1228.3127", 
-            "id": "202", 
-            "name": "GNL Quintero"
+            "id": "202"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Fatima", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5971.54", 
             "x": "1686.024", 
-            "id": "205", 
-            "name": "Fatima"
+            "id": "205"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "Procart", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5062.6465", 
             "x": "1328.7369", 
-            "id": "204", 
-            "name": "Procart"
+            "id": "204"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Lircay", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5084.595", 
             "x": "1164.8685", 
-            "id": "207", 
-            "name": "Lircay"
+            "id": "207"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Curanilahue", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3680.0", 
             "x": "410.0", 
-            "id": "206", 
-            "name": "Curanilahue"
+            "id": "206"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Bocamina", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3979.7383", 
             "x": "406.52744", 
-            "id": "209", 
-            "name": "Bocamina"
+            "id": "209"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "Las Palmas", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "7480.0", 
             "x": "1280.0", 
-            "id": "208", 
-            "name": "Las Palmas"
+            "id": "208"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Castro", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "600.0", 
             "x": "260.0", 
-            "id": "77", 
-            "name": "Castro"
+            "id": "77"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Ventanas", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6863.4414", 
             "x": "1292.997", 
-            "id": "76", 
-            "name": "Ventanas"
+            "id": "76"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Agrosuper", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9187.53", 
             "x": "1385.4711", 
-            "id": "75", 
-            "name": "Agrosuper"
+            "id": "75"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Las Aranas", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5962.447", 
             "x": "1365.274", 
-            "id": "74", 
-            "name": "Las Aranas"
+            "id": "74"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Chivilcan", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2970.0", 
             "x": "730.0", 
-            "id": "73", 
-            "name": "Chivilcan"
+            "id": "73"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Impulsion", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10079.5205", 
             "x": "1717.5758", 
-            "id": "72", 
-            "name": "Impulsion"
+            "id": "72"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "San Joaquin", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8407.877", 
             "x": "1339.8534", 
-            "id": "71", 
-            "name": "San Joaquin"
+            "id": "71"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Curico", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5339.676", 
             "x": "1398.3618", 
-            "id": "70", 
-            "name": "Curico"
+            "id": "70"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Pellets", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9180.844", 
             "x": "1325.4813", 
-            "id": "79", 
-            "name": "Pellets"
+            "id": "79"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Central Licanten", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5360.8164", 
             "x": "1049.1765", 
-            "id": "78", 
-            "name": "Central Licanten"
+            "id": "78"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Colaco", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1101.789", 
             "x": "464.7854", 
-            "id": "8", 
-            "name": "Colaco"
+            "id": "8"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Quinta", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5413.8745", 
             "x": "1535.6959", 
-            "id": "68", 
-            "name": "Quinta"
+            "id": "68"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Chena", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6222.0024", 
             "x": "1736.1724", 
-            "id": "120", 
-            "name": "Chena"
+            "id": "120"
         }, 
         {
+            "province": "Colchagua", 
+            "kind": "Substation", 
+            "name": "San Fernando", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5514.7124", 
             "x": "1633.8749", 
-            "id": "121", 
-            "name": "San Fernando"
+            "id": "121"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Bucalemu", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3979.9944", 
             "x": "1034.8319", 
-            "id": "122", 
-            "name": "Bucalemu"
+            "id": "122"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Substation", 
+            "name": "San Antonio", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6174.758", 
             "x": "1213.8352", 
-            "id": "123", 
-            "name": "San Antonio"
+            "id": "123"
         }, 
         {
+            "province": "Chacabuco", 
+            "kind": "Substation", 
+            "name": "Lampa", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6387.708", 
             "x": "1695.9572", 
-            "id": "124", 
-            "name": "Lampa"
+            "id": "124"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Lo Espejo", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6213.7324", 
             "x": "1865.6354", 
-            "id": "125", 
-            "name": "Lo Espejo"
+            "id": "125"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "La Candelaria", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9920.0", 
             "x": "2030.0", 
-            "id": "126", 
-            "name": "La Candelaria"
+            "id": "126"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Torquemada", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6686.598", 
             "x": "1223.3163", 
-            "id": "127", 
-            "name": "Torquemada"
+            "id": "127"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Concon", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6633.9155", 
             "x": "1268.5476", 
-            "id": "128", 
-            "name": "Concon"
+            "id": "128"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Substation", 
+            "name": "Leyda", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6162.225", 
             "x": "1289.5482", 
-            "id": "129", 
-            "name": "Leyda"
+            "id": "129"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Quilacoya", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3856.6697", 
             "x": "676.29785", 
-            "id": "414", 
-            "name": "Quilacoya"
+            "id": "414"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Santa Lidia", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4127.3145", 
             "x": "901.24524", 
-            "id": "415", 
-            "name": "Santa Lidia"
+            "id": "415"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Power plant", 
+            "name": "Degan", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "730.0", 
             "x": "240.0", 
-            "id": "416", 
-            "name": "Degan"
+            "id": "416"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Power plant", 
+            "name": "San Isidro", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6614.895", 
             "x": "1355.0016", 
-            "id": "417", 
-            "name": "San Isidro"
+            "id": "417"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Punta Colorada", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "8773.36", 
             "x": "1553.4454", 
-            "id": "410", 
-            "name": "Punta Colorada"
+            "id": "410"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Perales", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4238.579", 
             "x": "386.71606", 
-            "id": "411", 
-            "name": "Perales"
+            "id": "411"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Quilleco", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3950.0", 
             "x": "1160.0", 
-            "id": "412", 
-            "name": "Quilleco"
+            "id": "412"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Enacar", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3910.8208", 
             "x": "416.76892", 
-            "id": "413", 
-            "name": "Enacar"
+            "id": "413"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Power plant", 
+            "name": "Chiburgo", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4836.5024", 
             "x": "1468.3633", 
-            "id": "418", 
-            "name": "Chiburgo"
+            "id": "418"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Power plant", 
+            "name": "Los Espinos", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "7260.0", 
             "x": "1370.0", 
-            "id": "419", 
-            "name": "Los Espinos"
+            "id": "419"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Substation", 
+            "name": "Victoria", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3270.0", 
             "x": "950.0", 
-            "id": "319", 
-            "name": "Victoria"
+            "id": "319"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Negrete", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3620.0", 
             "x": "840.0", 
-            "id": "318", 
-            "name": "Negrete"
+            "id": "318"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "San Luis", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6573.232", 
             "x": "1296.859", 
-            "id": "313", 
-            "name": "San Luis"
+            "id": "313"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Power plant", 
+            "name": "Olivos", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "7143.815", 
             "x": "1371.4054", 
-            "id": "312", 
-            "name": "Olivos"
+            "id": "312"
         }, 
         {
+            "province": "Talagante", 
+            "kind": "Substation", 
+            "name": "Isla de Maipo", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6095.0347", 
             "x": "1555.1309", 
-            "id": "311", 
-            "name": "Isla de Maipo"
+            "id": "311"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Hualpen", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4100.3955", 
             "x": "572.0853", 
-            "id": "310", 
-            "name": "Hualpen"
+            "id": "310"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Substation", 
+            "name": "Constitucion", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5103.137", 
             "x": "851.0445", 
-            "id": "317", 
-            "name": "Constitucion"
+            "id": "317"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "El Melon", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6756.2173", 
             "x": "1434.7745", 
-            "id": "316", 
-            "name": "El Melon"
+            "id": "316"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Rosario", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5607.4585", 
             "x": "1733.5127", 
-            "id": "315", 
-            "name": "Rosario"
+            "id": "315"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Lota", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3815.6023", 
             "x": "546.5492", 
-            "id": "314", 
-            "name": "Lota"
+            "id": "314"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Tres Pinos", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3600.0", 
             "x": "390.0", 
-            "id": "3", 
-            "name": "Tres Pinos"
+            "id": "3"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Power plant", 
+            "name": "Emelda", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "10480.77", 
             "x": "1836.9048", 
-            "id": "368", 
-            "name": "Emelda"
+            "id": "368"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Power plant", 
+            "name": "Rapel", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5805.0806", 
             "x": "1216.0645", 
-            "id": "369", 
-            "name": "Rapel"
+            "id": "369"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Paine", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6068.357", 
             "x": "1629.849", 
-            "id": "366", 
-            "name": "Paine"
+            "id": "366"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Los Angeles", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3738.0215", 
             "x": "924.2633", 
-            "id": "367", 
-            "name": "Los Angeles"
+            "id": "367"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Refugio", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9320.0", 
             "x": "1990.0", 
-            "id": "364", 
-            "name": "Refugio"
+            "id": "364"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Calle Calle", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2390.6763", 
             "x": "569.1177", 
-            "id": "365", 
-            "name": "Calle Calle"
+            "id": "365"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Loncoche", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "2550.0", 
             "x": "870.0", 
-            "id": "362", 
-            "name": "Loncoche"
+            "id": "362"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Power plant", 
+            "name": "Canela", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "7470.012", 
             "x": "1143.6074", 
-            "id": "363", 
-            "name": "Canela"
+            "id": "363"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Substation", 
+            "name": "Pumahue", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3020.0", 
             "x": "770.0", 
-            "id": "360", 
-            "name": "Pumahue"
+            "id": "360"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "Calera Centro", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6811.335", 
             "x": "1528.0306", 
-            "id": "361", 
-            "name": "Calera Centro"
+            "id": "361"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Los Loros", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9730.0", 
             "x": "1890.0", 
-            "id": "380", 
-            "name": "Los Loros"
+            "id": "380"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Petrox", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4054.2764", 
             "x": "396.68582", 
-            "id": "381", 
-            "name": "Petrox"
+            "id": "381"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Mampil", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3761.9253", 
             "x": "1285.3859", 
-            "id": "382", 
-            "name": "Mampil"
+            "id": "382"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Substation", 
+            "name": "Esperanza", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "6597.1924", 
             "x": "1732.825", 
-            "id": "383", 
-            "name": "Esperanza"
+            "id": "383"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Andacollo", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8202.034", 
             "x": "1536.7517", 
-            "id": "384", 
-            "name": "Andacollo"
+            "id": "384"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Lord Cochrane", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6258.7056", 
             "x": "1811.239", 
-            "id": "385", 
-            "name": "Lord Cochrane"
+            "id": "385"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Punta de Cortes", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5743.6113", 
             "x": "1617.8342", 
-            "id": "386", 
-            "name": "Punta de Cortes"
+            "id": "386"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Antuco", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3988.548", 
             "x": "1313.6635", 
-            "id": "387", 
-            "name": "Antuco"
+            "id": "387"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Power plant", 
+            "name": "Chuyaca", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "1820.0", 
             "x": "510.0", 
-            "id": "388", 
-            "name": "Chuyaca"
+            "id": "388"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Interconexion", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5792.638", 
             "x": "1822.9191", 
-            "id": "389", 
-            "name": "Interconexion"
+            "id": "389"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Pelequen", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5559.745", 
             "x": "1698.6375", 
-            "id": "60", 
-            "name": "Pelequen"
+            "id": "60"
         }, 
         {
+            "province": "Maipo", 
+            "kind": "Substation", 
+            "name": "Panamericana", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6183.903", 
             "x": "1804.887", 
-            "id": "61", 
-            "name": "Panamericana"
+            "id": "61"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "San Lorenzo", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "10580.0", 
             "x": "1930.0", 
-            "id": "258", 
-            "name": "San Lorenzo"
+            "id": "258"
         }, 
         {
+            "province": "Talagante", 
+            "kind": "Substation", 
+            "name": "El Monte", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6133.203", 
             "x": "1517.1184", 
-            "id": "259", 
-            "name": "El Monte"
+            "id": "259"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Ojos de Agua", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4905.9165", 
             "x": "1777.5095", 
-            "id": "64", 
-            "name": "Ojos de Agua"
+            "id": "64"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Cachapoal", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5627.343", 
             "x": "1581.2734", 
-            "id": "65", 
-            "name": "Cachapoal"
+            "id": "65"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "V PRAT", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5280.0", 
             "x": "1200.0", 
-            "id": "66", 
-            "name": "V PRAT"
+            "id": "66"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "El Toro", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4030.0", 
             "x": "1420.0", 
-            "id": "67", 
-            "name": "El Toro"
+            "id": "67"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Power plant", 
+            "name": "Florida", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "6322.392", 
             "x": "1986.6222", 
-            "id": "252", 
-            "name": "Florida"
+            "id": "252"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Las Piedras", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8138.666", 
             "x": "1552.5568", 
-            "id": "69", 
-            "name": "Las Piedras"
+            "id": "69"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Peuchen", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3710.0", 
             "x": "1350.0", 
-            "id": "250", 
-            "name": "Peuchen"
+            "id": "250"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Paipote", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9261.09", 
             "x": "2031.0906", 
-            "id": "251", 
-            "name": "Paipote"
+            "id": "251"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Mariposas", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5198.201", 
             "x": "1193.3611", 
-            "id": "256", 
-            "name": "Mariposas"
+            "id": "256"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Malloa", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5670.7856", 
             "x": "1629.4097", 
-            "id": "257", 
-            "name": "Malloa"
+            "id": "257"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Puerto Montt", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1280.0", 
             "x": "690.0", 
-            "id": "254", 
-            "name": "Puerto Montt"
+            "id": "254"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "Las Companias", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8510.0", 
             "x": "1370.0", 
-            "id": "255", 
-            "name": "Las Companias"
+            "id": "255"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Achao", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "580.0", 
             "x": "440.0", 
-            "id": "168", 
-            "name": "Achao"
+            "id": "168"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Los Almendros", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6176.3525", 
             "x": "2028.2388", 
-            "id": "169", 
-            "name": "Los Almendros"
+            "id": "169"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Cerrillos", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9793.981", 
             "x": "1818.6008", 
-            "id": "164", 
-            "name": "Cerrillos"
+            "id": "164"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Curillinque", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5070.9766", 
             "x": "1642.4744", 
-            "id": "165", 
-            "name": "Curillinque"
+            "id": "165"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Central Yungay", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "3967.4814", 
             "x": "875.37225", 
-            "id": "166", 
-            "name": "Central Yungay"
+            "id": "166"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Quellon", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "182.73792", 
             "x": "354.89035", 
-            "id": "167", 
-            "name": "Quellon"
+            "id": "167"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Power plant", 
+            "name": "Maitenes", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "6223.502", 
             "x": "1967.7683", 
-            "id": "160", 
-            "name": "Maitenes"
+            "id": "160"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Achupallas", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6693.0337", 
             "x": "1301.1119", 
-            "id": "161", 
-            "name": "Achupallas"
+            "id": "161"
         }, 
         {
+            "province": "Los Andes", 
+            "kind": "Substation", 
+            "name": "El Llano", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6549.8384", 
             "x": "1899.3914", 
-            "id": "162", 
-            "name": "El Llano"
+            "id": "162"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Minera Mantos de Oro", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10150.0", 
             "x": "2360.0", 
-            "id": "163", 
-            "name": "Minera Mantos de Oro"
+            "id": "163"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Los Andes", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6525.5303", 
             "x": "1763.0933", 
-            "id": "9", 
-            "name": "Los Andes"
+            "id": "9"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Power plant", 
+            "name": "Central Linares", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4771.6187", 
             "x": "1078.9111", 
-            "id": "357", 
-            "name": "Central Linares"
+            "id": "357"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Estructura 28", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4194.6426", 
             "x": "871.6868", 
-            "id": "356", 
-            "name": "Estructura 28"
+            "id": "356"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Pangue", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3465.8096", 
             "x": "1397.2621", 
-            "id": "355", 
-            "name": "Pangue"
+            "id": "355"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Quereo", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7293.197", 
             "x": "1235.9557", 
-            "id": "354", 
-            "name": "Quereo"
+            "id": "354"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Huachipato", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4304.055", 
             "x": "422.6061", 
-            "id": "353", 
-            "name": "Huachipato"
+            "id": "353"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Medellin", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9912.887", 
             "x": "1808.7378", 
-            "id": "352", 
-            "name": "Medellin"
+            "id": "352"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Hnos Clark", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6580.3916", 
             "x": "1808.0322", 
-            "id": "351", 
-            "name": "Hnos Clark"
+            "id": "351"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Alto Melipilla", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6122.0005", 
             "x": "1345.1028", 
-            "id": "350", 
-            "name": "Alto Melipilla"
+            "id": "350"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Los Molinos", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "1223.4105", 
             "x": "503.71362", 
-            "id": "359", 
-            "name": "Los Molinos"
+            "id": "359"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Penco", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4249.894", 
             "x": "619.94885", 
-            "id": "358", 
-            "name": "Penco"
+            "id": "358"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Power plant", 
+            "name": "Loma Alta", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5030.0", 
             "x": "1530.0", 
-            "id": "216", 
-            "name": "Loma Alta"
+            "id": "216"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "Combarbala", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7640.0", 
             "x": "1540.0", 
-            "id": "217", 
-            "name": "Combarbala"
+            "id": "217"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Alhue", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5894.1226", 
             "x": "1484.9509", 
-            "id": "214", 
-            "name": "Alhue"
+            "id": "214"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Carampangue", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3769.3967", 
             "x": "481.27457", 
-            "id": "215", 
-            "name": "Carampangue"
+            "id": "215"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Tierra Amarilla", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9810.725", 
             "x": "1892.985", 
-            "id": "212", 
-            "name": "Tierra Amarilla"
+            "id": "212"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Puqueldon", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "490.0", 
             "x": "370.0", 
-            "id": "213", 
-            "name": "Puqueldon"
+            "id": "213"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "Santa Elvira", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4168.492", 
             "x": "962.33453", 
-            "id": "210", 
-            "name": "Santa Elvira"
+            "id": "210"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Ancud", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "987.19995", 
             "x": "250.0", 
-            "id": "211", 
-            "name": "Ancud"
+            "id": "211"
         }, 
         {
+            "province": "Osorno", 
+            "kind": "Substation", 
+            "name": "Pitrufquen", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "2730.0", 
             "x": "760.0", 
-            "id": "218", 
-            "name": "Pitrufquen"
+            "id": "218"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Lirquen", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4332.7734", 
             "x": "508.12344", 
-            "id": "219", 
-            "name": "Lirquen"
+            "id": "219"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Power plant", 
+            "name": "Central Horcones", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3809.0376", 
             "x": "341.75757", 
-            "id": "289", 
-            "name": "Central Horcones"
+            "id": "289"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Power plant", 
+            "name": "Canutillar", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "1250.0", 
             "x": "970.0", 
-            "id": "288", 
-            "name": "Canutillar"
+            "id": "288"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Isla", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "4852.7397", 
             "x": "1703.286", 
-            "id": "4", 
-            "name": "Isla"
+            "id": "4"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "El Avellano", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3689.073", 
             "x": "976.2357", 
-            "id": "281", 
-            "name": "El Avellano"
+            "id": "281"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Power plant", 
+            "name": "Central Tierra Amarilla", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "9886.1045", 
             "x": "1869.0615", 
-            "id": "280", 
-            "name": "Central Tierra Amarilla"
+            "id": "280"
         }, 
         {
+            "province": "Cauquenes", 
+            "kind": "Substation", 
+            "name": "Cauquenes", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "4750.0", 
             "x": "750.0", 
-            "id": "283", 
-            "name": "Cauquenes"
+            "id": "283"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Substation", 
+            "name": "Pajonales", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "8866.243", 
             "x": "1526.9017", 
-            "id": "282", 
-            "name": "Pajonales"
+            "id": "282"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Power plant", 
+            "name": "Central Salvador", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "10390.992", 
             "x": "1862.4336", 
-            "id": "285", 
-            "name": "Central Salvador"
+            "id": "285"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Power plant", 
+            "name": "El Penon", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "8244.44", 
             "x": "1422.0933", 
-            "id": "284", 
-            "name": "El Penon"
+            "id": "284"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Power plant", 
+            "name": "Puclaro", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "8417.93", 
             "x": "1535.9766", 
-            "id": "287", 
-            "name": "Puclaro"
+            "id": "287"
         }, 
         {
+            "province": "Linares", 
+            "kind": "Substation", 
+            "name": "Parral", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "4620.0", 
             "x": "1068.866", 
-            "id": "286", 
-            "name": "Parral"
+            "id": "286"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Substation", 
+            "name": "Chanaral", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10460.0", 
             "x": "1576.0", 
-            "id": "263", 
-            "name": "Chanaral"
+            "id": "263"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Chonchi", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "470.0", 
             "x": "250.0", 
-            "id": "262", 
-            "name": "Chonchi"
+            "id": "262"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Itahue", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5273.9077", 
             "x": "1280.9703", 
-            "id": "261", 
-            "name": "Itahue"
+            "id": "261"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "Chacayes", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5836.591", 
             "x": "1778.8602", 
-            "id": "260", 
-            "name": "Chacayes"
+            "id": "260"
         }, 
         {
+            "province": "Chacabuco", 
+            "kind": "Power plant", 
+            "name": "El Manzano", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "5657.865", 
             "x": "1420.2837", 
-            "id": "267", 
-            "name": "El Manzano"
+            "id": "267"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "San Pedro", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "6525.184", 
             "x": "1362.0217", 
-            "id": "266", 
-            "name": "San Pedro"
+            "id": "266"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Castilla", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9600.0", 
             "x": "1630.0", 
-            "id": "265", 
-            "name": "Castilla"
+            "id": "265"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Nueva Ventanas", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6795.2734", 
             "x": "1346.0133", 
-            "id": "264", 
-            "name": "Nueva Ventanas"
+            "id": "264"
         }, 
         {
+            "province": "Nuble", 
+            "kind": "Substation", 
+            "name": "San Carlos", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4420.0", 
             "x": "980.0", 
-            "id": "269", 
-            "name": "San Carlos"
+            "id": "269"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Substation", 
+            "name": "Traigen", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3266.6367", 
             "x": "753.2727", 
-            "id": "268", 
-            "name": "Traigen"
+            "id": "268"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Substation", 
+            "name": "San Juan", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8316.471", 
             "x": "1327.6488", 
-            "id": "59", 
-            "name": "San Juan"
+            "id": "59"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Loma los Colorados", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "6451.315", 
             "x": "1823.6628", 
-            "id": "58", 
-            "name": "Loma los Colorados"
+            "id": "58"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Substation", 
+            "name": "Brasil", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6299.5566", 
             "x": "1850.7803", 
-            "id": "55", 
-            "name": "Brasil"
+            "id": "55"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Power plant", 
+            "name": "Punta Colorada Eolica", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "7397.467", 
             "x": "1182.5912", 
-            "id": "54", 
-            "name": "Punta Colorada Eolica"
+            "id": "54"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Los Lagos", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2290.0", 
             "x": "740.0", 
-            "id": "57", 
-            "name": "Los Lagos"
+            "id": "57"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Graneros", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5852.499", 
             "x": "1712.5704", 
-            "id": "56", 
-            "name": "Graneros"
+            "id": "56"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Agua Santa", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6522.679", 
             "x": "1203.7257", 
-            "id": "51", 
-            "name": "Agua Santa"
+            "id": "51"
         }, 
         {
+            "province": "San Felipe", 
+            "kind": "Substation", 
+            "name": "Llay Llay", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6588.1807", 
             "x": "1569.7212", 
-            "id": "50", 
-            "name": "Llay Llay"
+            "id": "50"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "Duqueco", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3774.849", 
             "x": "992.0796", 
-            "id": "53", 
-            "name": "Duqueco"
+            "id": "53"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "Ovalle", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7950.0", 
             "x": "1440.0", 
-            "id": "52", 
-            "name": "Ovalle"
+            "id": "52"
         }, 
         {
+            "province": "Colchagua", 
+            "kind": "Substation", 
+            "name": "Tinguiririca", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5481.5815", 
             "x": "1562.2437", 
-            "id": "63", 
-            "name": "Tinguiririca"
+            "id": "63"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Hualane", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5319.2705", 
             "x": "1110.6534", 
-            "id": "115", 
-            "name": "Hualane"
+            "id": "115"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Placilla", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6403.594", 
             "x": "1306.1542", 
-            "id": "114", 
-            "name": "Placilla"
+            "id": "114"
         }, 
         {
+            "province": "Huasco", 
+            "kind": "Power plant", 
+            "name": "Huasco", 
+            "region": "Atacama", 
+            "io": 2.255813953, 
             "y": "9267.26", 
             "x": "1333.6224", 
-            "id": "117", 
-            "name": "Huasco"
+            "id": "117"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Substation", 
+            "name": "Piduco", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5117.3267", 
             "x": "1316.6091", 
-            "id": "116", 
-            "name": "Piduco"
+            "id": "116"
         }, 
         {
+            "province": "Cardenal Caro", 
+            "kind": "Power plant", 
+            "name": "Central Esperanza", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5768.84", 
             "x": "1748.0411", 
-            "id": "111", 
-            "name": "Central Esperanza"
+            "id": "111"
         }, 
         {
+            "province": "Copiapo", 
+            "kind": "Substation", 
+            "name": "Cardones", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "9865.186", 
             "x": "1739.821", 
-            "id": "110", 
-            "name": "Cardones"
+            "id": "110"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Power plant", 
+            "name": "Carena", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "6067.453", 
             "x": "1838.8214", 
-            "id": "113", 
-            "name": "Carena"
+            "id": "113"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Sewel", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5842.4844", 
             "x": "1913.6599", 
-            "id": "253", 
-            "name": "Sewel"
+            "id": "253"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Puchoco", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3974.0974", 
             "x": "623.1026", 
-            "id": "119", 
-            "name": "Puchoco"
+            "id": "119"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Power plant", 
+            "name": "Central Laja", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "3837.7844", 
             "x": "794.69556", 
-            "id": "118", 
-            "name": "Central Laja"
+            "id": "118"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Substation", 
+            "name": "Pid Pid", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "670.0", 
             "x": "170.0", 
-            "id": "308", 
-            "name": "Pid Pid"
+            "id": "308"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Vizcachas", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6096.4346", 
             "x": "1914.7914", 
-            "id": "309", 
-            "name": "Vizcachas"
+            "id": "309"
         }, 
         {
+            "province": "Chanaral", 
+            "kind": "Substation", 
+            "name": "El Salvador", 
+            "region": "Atacama", 
+            "io": -1.0, 
             "y": "10610.0", 
             "x": "2066.0", 
-            "id": "300", 
-            "name": "El Salvador"
+            "id": "300"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Power plant", 
+            "name": "Central Collipulli", 
+            "region": "Araucania", 
+            "io": 2.255813953, 
             "y": "3475.2002", 
             "x": "910.0", 
-            "id": "301", 
-            "name": "Central Collipulli"
+            "id": "301"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Ciruelos", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2450.0", 
             "x": "680.0", 
-            "id": "302", 
-            "name": "Ciruelos"
+            "id": "302"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Substation", 
+            "name": "Las Balandras", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "9010.0", 
             "x": "1560.0", 
-            "id": "303", 
-            "name": "Las Balandras"
+            "id": "303"
         }, 
         {
+            "province": "Arauco", 
+            "kind": "Substation", 
+            "name": "Estructura 61", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3862.8818", 
             "x": "380.1249", 
-            "id": "304", 
-            "name": "Estructura 61"
+            "id": "304"
         }, 
         {
+            "province": "San Antonio", 
+            "kind": "Power plant", 
+            "name": "Eolica Totoral", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "7570.528", 
             "x": "1244.1799", 
-            "id": "305", 
-            "name": "Eolica Totoral"
+            "id": "305"
         }, 
         {
+            "province": "Cautin", 
+            "kind": "Power plant", 
+            "name": "Central Lautaro", 
+            "region": "Araucania", 
+            "io": 2.255813953, 
             "y": "3049.92", 
             "x": "987.56006", 
-            "id": "306", 
-            "name": "Central Lautaro"
+            "id": "306"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "Tunel El Melon", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6747.2617", 
             "x": "1506.5638", 
-            "id": "307", 
-            "name": "Tunel El Melon"
+            "id": "307"
         }, 
         {
+            "province": "Talca", 
+            "kind": "Substation", 
+            "name": "Estructura 74", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5190.6934", 
             "x": "1273.902", 
-            "id": "181", 
-            "name": "Estructura 74"
+            "id": "181"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Los Pelambres", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7350.0", 
             "x": "1730.0", 
-            "id": "229", 
-            "name": "Los Pelambres"
+            "id": "229"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Substation", 
+            "name": "Miraflores", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6500.999", 
             "x": "1284.6204", 
-            "id": "228", 
-            "name": "Miraflores"
+            "id": "228"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Picarte", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2308.8506", 
             "x": "460.49655", 
-            "id": "227", 
-            "name": "Picarte"
+            "id": "227"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Calbuco", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1175.635", 
             "x": "438.73022", 
-            "id": "226", 
-            "name": "Calbuco"
+            "id": "226"
         }, 
         {
+            "province": "Colchagua", 
+            "kind": "Substation", 
+            "name": "Nancagua", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5522.3213", 
             "x": "1494.1693", 
-            "id": "225", 
-            "name": "Nancagua"
+            "id": "225"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Choapa", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7227.158", 
             "x": "1246.7358", 
-            "id": "224", 
-            "name": "Choapa"
+            "id": "224"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "Monte Redondo", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "8042.0254", 
             "x": "1275.2152", 
-            "id": "223", 
-            "name": "Monte Redondo"
+            "id": "223"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Power plant", 
+            "name": "Sauzal", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": 2.255813953, 
             "y": "5706.856", 
             "x": "1811.5203", 
-            "id": "222", 
-            "name": "Sauzal"
+            "id": "222"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Substation", 
+            "name": "Andalien", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "4291.939", 
             "x": "543.0724", 
-            "id": "221", 
-            "name": "Andalien"
+            "id": "221"
         }, 
         {
+            "province": "Bio bio", 
+            "kind": "Substation", 
+            "name": "El Rosal", 
+            "region": "Bio bio", 
+            "io": -1.0, 
             "y": "3570.0", 
             "x": "1000.0", 
-            "id": "220", 
-            "name": "El Rosal"
+            "id": "220"
         }, 
         {
+            "province": "Concepcion", 
+            "kind": "Power plant", 
+            "name": "Petropower", 
+            "region": "Bio bio", 
+            "io": 2.255813953, 
             "y": "4106.0796", 
             "x": "448.24478", 
-            "id": "391", 
-            "name": "Petropower"
+            "id": "391"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Power plant", 
+            "name": "Trapen", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "1168.2875", 
             "x": "581.8372", 
-            "id": "390", 
-            "name": "Trapen"
+            "id": "390"
         }, 
         {
+            "province": "Santiago", 
+            "kind": "Power plant", 
+            "name": "Nueva Renca", 
+            "region": "Metropolitana", 
+            "io": 2.255813953, 
             "y": "6331.398", 
             "x": "1787.2991", 
-            "id": "151", 
-            "name": "Nueva Renca"
+            "id": "151"
         }, 
         {
+            "province": "Elqui", 
+            "kind": "Power plant", 
+            "name": "Los Morros", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "6153.854", 
             "x": "1923.716", 
-            "id": "150", 
-            "name": "Los Morros"
+            "id": "150"
         }, 
         {
+            "province": "Choapa", 
+            "kind": "Substation", 
+            "name": "Salamanca", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7320.0", 
             "x": "1440.0", 
-            "id": "153", 
-            "name": "Salamanca"
+            "id": "153"
         }, 
         {
+            "province": "Quillota", 
+            "kind": "Substation", 
+            "name": "Quillota", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6584.253", 
             "x": "1428.4275", 
-            "id": "152", 
-            "name": "Quillota"
+            "id": "152"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Yungay", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "3920.2104", 
             "x": "827.2061", 
-            "id": "155", 
-            "name": "Yungay"
+            "id": "155"
         }, 
         {
+            "province": "Chacabuco", 
+            "kind": "Substation", 
+            "name": "Rungue", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6518.8877", 
             "x": "1599.9932", 
-            "id": "154", 
-            "name": "Rungue"
+            "id": "154"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Las Pinatas", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "9080.0", 
             "x": "1530.0", 
-            "id": "157", 
-            "name": "Las Pinatas"
+            "id": "157"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "El Sauce", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7700.0", 
             "x": "1500.0", 
-            "id": "156", 
-            "name": "El Sauce"
+            "id": "156"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Power plant", 
+            "name": "Los Molles", 
+            "region": "Coquimbo", 
+            "io": 2.255813953, 
             "y": "7900.0", 
             "x": "1730.0", 
-            "id": "159", 
-            "name": "Los Molles"
+            "id": "159"
         }, 
         {
+            "province": "Valparaiso", 
+            "kind": "Power plant", 
+            "name": "Central Casablanca", 
+            "region": "Valparaiso", 
+            "io": 2.255813953, 
             "y": "6359.846", 
             "x": "1437.2743", 
-            "id": "158", 
-            "name": "Central Casablanca"
+            "id": "158"
         }, 
         {
+            "province": "Melipilla", 
+            "kind": "Substation", 
+            "name": "Mandinga", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6060.0", 
             "x": "1370.0", 
-            "id": "112", 
-            "name": "Mandinga"
+            "id": "112"
         }, 
         {
+            "province": "Malleco", 
+            "kind": "Substation", 
+            "name": "Collipulli", 
+            "region": "Araucania", 
+            "io": -1.0, 
             "y": "3392.7998", 
             "x": "910.0", 
-            "id": "399", 
-            "name": "Collipulli"
+            "id": "399"
         }, 
         {
+            "province": "Petorca", 
+            "kind": "Substation", 
+            "name": "Cabildo", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6970.0", 
             "x": "1480.0", 
-            "id": "81", 
-            "name": "Cabildo"
+            "id": "81"
         }, 
         {
+            "province": "Cordillera", 
+            "kind": "Substation", 
+            "name": "Costanera", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "5952.965", 
             "x": "1910.2065", 
-            "id": "48", 
-            "name": "Costanera"
+            "id": "48"
         }, 
         {
+            "province": "Cachapoal", 
+            "kind": "Substation", 
+            "name": "Malloa Nueva", 
+            "region": "Libertador Bernardo OHiggins", 
+            "io": -1.0, 
             "y": "5732.8545", 
             "x": "1478.922", 
-            "id": "49", 
-            "name": "Malloa Nueva"
+            "id": "49"
         }, 
         {
+            "province": "Chiloe", 
+            "kind": "Power plant", 
+            "name": "Central Ancud", 
+            "region": "Los Lagos", 
+            "io": 2.255813953, 
             "y": "904.80005", 
             "x": "250.0", 
-            "id": "46", 
-            "name": "Central Ancud"
+            "id": "46"
         }, 
         {
+            "province": "Valdivia", 
+            "kind": "Substation", 
+            "name": "Chumpullo", 
+            "region": "Los Rios", 
+            "io": -1.0, 
             "y": "2400.0", 
             "x": "490.0", 
-            "id": "47", 
-            "name": "Chumpullo"
+            "id": "47"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Substation", 
+            "name": "Licanten", 
+            "region": "Maule", 
+            "io": -1.0, 
             "y": "5310.2715", 
             "x": "1000.27167", 
-            "id": "44", 
-            "name": "Licanten"
+            "id": "44"
         }, 
         {
+            "province": "Curico", 
+            "kind": "Power plant", 
+            "name": "Teno", 
+            "region": "Maule", 
+            "io": 2.255813953, 
             "y": "5409.491", 
             "x": "1344.2308", 
-            "id": "45", 
-            "name": "Teno"
+            "id": "45"
         }, 
         {
+            "province": "Llanquihue", 
+            "kind": "Substation", 
+            "name": "Punta Barranco", 
+            "region": "Los Lagos", 
+            "io": -1.0, 
             "y": "1037.7693", 
             "x": "448.54013", 
-            "id": "42", 
-            "name": "Punta Barranco"
+            "id": "42"
         }, 
         {
+            "province": "Chacabuco", 
+            "kind": "Substation", 
+            "name": "Punta Peuco", 
+            "region": "Metropolitana", 
+            "io": -1.0, 
             "y": "6465.2227", 
             "x": "1741.9225", 
-            "id": "43", 
-            "name": "Punta Peuco"
+            "id": "43"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "Monte Patria", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7958.3184", 
             "x": "1563.3638", 
-            "id": "40", 
-            "name": "Monte Patria"
+            "id": "40"
         }, 
         {
+            "province": "Petorca", 
+            "kind": "Substation", 
+            "name": "Quinquimo", 
+            "region": "Valparaiso", 
+            "io": -1.0, 
             "y": "6970.0", 
             "x": "1330.0", 
-            "id": "41", 
-            "name": "Quinquimo"
+            "id": "41"
         }, 
         {
+            "province": "Limari", 
+            "kind": "Substation", 
+            "name": "Punitaqui", 
+            "region": "Coquimbo", 
+            "io": -1.0, 
             "y": "7780.0", 
             "x": "1441.3999", 
-            "id": "5", 
-            "name": "Punitaqui"
+            "id": "5"
         }
     ], 
     "links": [
