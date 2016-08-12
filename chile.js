@@ -67,6 +67,8 @@ d3.json("graph_info.json", function(error, graph) {
             toggle = 0;
             oneclick = 0;
             d3.select("#node_tag").remove();
+            d3.select("#region_tag").remove() // clear node_region
+            d3.select("#province_tag").remove() // clear node_province
             d3.select("svg").selectAll("path").remove(); // clear graph
             nodeElements.style("opacity", 1).classed("selected",false); // clear double-cick-connected
             linksElements.style("opacity", 1);  // clear double-cick-connected
@@ -157,6 +159,8 @@ d3.json("graph_info.json", function(error, graph) {
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
             d3.select("#node_tag").remove();
+            d3.select("#region_tag").remove() // clear node_region
+            d3.select("#province_tag").remove() // clear node_province
             d3.select("svg").selectAll("path").remove(); // clear graph
             toggle = 0;
             oneclick = 0;
@@ -207,6 +211,8 @@ d3.json("graph_info.json", function(error, graph) {
                 node.classed("selected", false);
                 oneclick = 0;
                 d3.select("#node_tag").remove() // clear node_name
+                d3.select("#region_tag").remove() // clear node_region
+                d3.select("#province_tag").remove() // clear node_province
                 d3.select("svg").selectAll("path").remove(); // clear graph
                 // console.log("c");
             } else { // when selected, select 'not-selected'
@@ -224,7 +230,7 @@ d3.json("graph_info.json", function(error, graph) {
         var graphHeight = 240;	// SVG 요소의 높이
         var dataSet = [];	// 데이터셋
         var windowoffsetx = 600
-        var windowoffsety = 130
+        var windowoffsety = 200
 
         var windowgraph = svg
             .append("rect")
@@ -237,7 +243,7 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",0)
             .transition()
             .attr("x",600)
-            .attr("y",130)
+            .attr("y",200)
             .style("opacity",0.8)
             .attr("width",graphWidth)
             .attr("height",graphHeight);
@@ -246,13 +252,37 @@ d3.json("graph_info.json", function(error, graph) {
             .append("text")
             .attr("class","spec_label")
             .attr("x",600)
-            .attr("y",125)
+            .attr("y",145)
             .style("opacity",0)
             .style("font-size",40)
             .transition()
             .style("font-size",18)
             .style("opacity",1)
-            .text("Basin stability transition: ");
+            .text("Name: ");
+
+        var legend_region=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",600)
+            .attr("y",165)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Region: ");
+
+        var legend_province=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",600)
+            .attr("y",185)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Province: ");
 
         var title_bar=svg
             .append("rect")
@@ -261,7 +291,7 @@ d3.json("graph_info.json", function(error, graph) {
             .attr("y",0)
             .attr("width",width)
             .attr("height",50)
-            .style("opacity",0.8)
+            .style("opacity",0.7)
             .attr("fill","darkslategray");
 
         var title=svg
@@ -325,9 +355,25 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",1)
             .text("Edge: 573");
 
+        var reference=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",width-260)
+            .attr("y",height-10)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",12)
+            .style("opacity",1)
+            .style("fill-opacity",0.8)
+            .text("Reference: New J. Phys. 16(12)125001, 2014")
+            .on("click", function() { window.open("http://iopscience.iop.org/article/10.1088/1367-2630/17/11/113005"); });
+
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
             d3.select("#node_tag").remove() // clear node_name
+            d3.select("#region_tag").remove() // clear node_region
+            d3.select("#province_tag").remove() // clear node_province
             text_name(node);
             console.log(node.node().__data__);
             // text_name(node.node().__data__.name,node.node().__data__.region,node.node().__data__.province)
@@ -339,19 +385,29 @@ d3.json("graph_info.json", function(error, graph) {
             var name_tag=svg.append("text")
                 .attr("id","node_tag")
                 .text(node.node().__data__.name)
-                .attr("x",800)
-                .attr("y",125)
+                .attr("x",660)
+                .attr("y",145)
                 .attr("class","spec_label")
                 .style("fill","#dc143c")
                 .attr("opacity",1);
-            //
-            // var region_tag=svg.append("text")
-            //     .text(node.node().__data__.region)
-            //     .attr("x",800)
-            //     .attr("y",125)
-            //     .attr("class","spec_label")
-            //     .style("fill","#dc143c")
-            //     .attr("opacity",1);
+
+            var region_tag=svg.append("text")
+                .attr("id","region_tag")
+                .text(node.node().__data__.region)
+                .attr("x",670)
+                .attr("y",165)
+                .attr("class","spec_label")
+                .style("fill","#dc143c")
+                .attr("opacity",1);
+
+            var province_tag=svg.append("text")
+                .attr("id","province_tag")
+                .text(node.node().__data__.province)
+                .attr("x",685)
+                .attr("y",185)
+                .attr("class","spec_label")
+                .style("fill","#dc143c")
+                .attr("opacity",1);
 
         }
 
