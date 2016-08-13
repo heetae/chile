@@ -7,7 +7,7 @@ var offsety = 600;
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("id","#mainsvg")
+    .attr("id","mainsvg")
     .call(d3.behavior.zoom().scaleExtent([0.4, 8]).on("zoom", zoomed)).on("dblclick.zoom", null)
     .append("g");
 
@@ -66,16 +66,22 @@ d3.json("graph_info.json", function(error, graph) {
             linksElements.classed("selected",true);
             toggle = 0;
             oneclick = 0;
-            d3.select("#node_tag").remove();
-            d3.select("#region_tag").remove() // clear node_region
-            d3.select("#province_tag").remove() // clear node_province
-            d3.select("svg").selectAll("path").remove(); // clear graph
+            remove_drawing()
             nodeElements.style("opacity", 1).classed("selected",false); // clear double-cick-connected
             linksElements.style("opacity", 1);  // clear double-cick-connected
             toggle = 0;                          // clear double-cick-connected
             oneclick = 0;                         // clear double-cick-connected
         });
+    function remove_drawing(){
+        d3.select("#node_tag").remove();
+        d3.select("#region_tag").remove() // clear node_region
+        d3.select("#province_tag").remove() // clear node_province
+        // d3.select("svg").selectAll("path").remove(); // clear graph
+        d3.select("#k_line").remove(); // clear graph
+        d3.selectAll(".tick").remove();
+        d3.selectAll(".axis").remove();
 
+    }
 
     var linksElements = container.append("g")
         .attr("class", "link")
@@ -158,10 +164,7 @@ d3.json("graph_info.json", function(error, graph) {
             //Put them back to opacity=1
             nodeElements.style("opacity", 1).classed("selected",false);
             linksElements.style("opacity", 1);
-            d3.select("#node_tag").remove();
-            d3.select("#region_tag").remove() // clear node_region
-            d3.select("#province_tag").remove() // clear node_province
-            d3.select("svg").selectAll("path").remove(); // clear graph
+            remove_drawing()
             toggle = 0;
             oneclick = 0;
         }
@@ -193,8 +196,7 @@ d3.json("graph_info.json", function(error, graph) {
                 linksElements.style("opacity", 1);
                 toggle = 0;
                 oneclick = 0;
-                d3.select("#node_tag").remove() // clear node_name
-                d3.select("svg").selectAll("path").remove(); // clear graph
+                remove_drawing()
                 // console.log("a");
             } else if (toggle == 0 && oneclick ==0){ // when select one while not connected, not selected
                 //Put them back to opacity=1
@@ -210,10 +212,7 @@ d3.json("graph_info.json", function(error, graph) {
                 linksElements.style("opacity", 1);
                 node.classed("selected", false);
                 oneclick = 0;
-                d3.select("#node_tag").remove() // clear node_name
-                d3.select("#region_tag").remove() // clear node_region
-                d3.select("#province_tag").remove() // clear node_province
-                d3.select("svg").selectAll("path").remove(); // clear graph
+                remove_drawing()
                 // console.log("c");
             } else { // when selected, select 'not-selected'
                 nodeElements.style("opacity", 1).classed("selected",false);
@@ -230,7 +229,7 @@ d3.json("graph_info.json", function(error, graph) {
         var graphHeight = 240;	// SVG 요소의 높이
         var dataSet = [];	// 데이터셋
         var windowoffsetx = 600
-        var windowoffsety = 200
+        var windowoffsety = 225
 
         var windowgraph = svg
             .append("rect")
@@ -243,7 +242,7 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",0)
             .transition()
             .attr("x",600)
-            .attr("y",200)
+            .attr("y",225)
             .style("opacity",0.8)
             .attr("width",graphWidth)
             .attr("height",graphHeight);
@@ -260,6 +259,18 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",1)
             .text("Name: ");
 
+        var legend_province=svg
+            .append("text")
+            .attr("class","spec_label")
+            .attr("x",600)
+            .attr("y",185)
+            .style("opacity",0)
+            .style("font-size",40)
+            .transition()
+            .style("font-size",18)
+            .style("opacity",1)
+            .text("Province: ");
+
         var legend_region=svg
             .append("text")
             .attr("class","spec_label")
@@ -272,17 +283,17 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",1)
             .text("Region: ");
 
-        var legend_province=svg
+        var legend_graph_title=svg
             .append("text")
             .attr("class","spec_label")
             .attr("x",600)
-            .attr("y",185)
+            .attr("y",220)
             .style("opacity",0)
             .style("font-size",40)
             .transition()
             .style("font-size",18)
             .style("opacity",1)
-            .text("Province: ");
+            .text("Basin stability transition");
 
         var title_bar=svg
             .append("rect")
@@ -366,8 +377,8 @@ d3.json("graph_info.json", function(error, graph) {
             .style("font-size",12)
             .style("opacity",1)
             .style("fill-opacity",0.8)
-            .text("Reference: New J. Phys. 16(12)125001, 2014")
-            .on("click", function() { window.open("http://iopscience.iop.org/article/10.1088/1367-2630/17/11/113005"); });
+            .text("Reference: New J. Phys. 16(12)125001, 2014");
+            // .on("click", function() { window.open("http://iopscience.iop.org/article/10.1088/1367-2630/17/11/113005"); });
 
         function deltagraph (node){
             pickupdata(dataSet,node.node().__data__.id)
@@ -375,8 +386,6 @@ d3.json("graph_info.json", function(error, graph) {
             d3.select("#region_tag").remove() // clear node_region
             d3.select("#province_tag").remove() // clear node_province
             text_name(node);
-            console.log(node.node().__data__);
-            // text_name(node.node().__data__.name,node.node().__data__.region,node.node().__data__.province)
         };
 
         function text_name(node) {
@@ -423,6 +432,7 @@ d3.json("graph_info.json", function(error, graph) {
                 nulldata.push([plotdata[id][i]["x"],0]);
             }
             d3.select("svg").selectAll("path").remove();
+            d3.selectAll(".tick").remove();
             drawGraph(dataSet,nulldata,id);
         };
 
@@ -441,13 +451,43 @@ d3.json("graph_info.json", function(error, graph) {
             // 꺾은선 그래프 그리기
             var lineElements = svg.append("path")
                 .attr("class", "line")
-                .attr("id","#k_line")
+                .attr("id","k_line")
                 .style("opacity",0)
 //                .attr("transform", "translate(0,0)")
 //                .attr("d", delta_k(nulldata))
                 .transition()
                 .style("opacity",1)
                 .attr("d", delta_k(dataSet));
+
+            var x = d3.scale.linear()
+                .domain([1,19.9])
+                .range([windowoffsetx+graphWidth/19.9 ,windowoffsetx+graphWidth]);
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+                .ticks(10);
+
+            svg.append("g")
+                .attr("id","xaxis")
+                .call(xAxis)
+                .attr("class","axis")
+                .attr("transform", "translate(0,"+(windowoffsety+graphHeight*0.9)+")");
+
+            var y = d3.scale.linear()
+                .domain([0,1])
+                .range([0,-graphHeight*0.8]);
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(1);
+
+            svg.append("g")
+                .call(yAxis)
+                .attr("class","axis")
+                .attr("transform", "translate("+(windowoffsetx+graphWidth/19.9)+","+(windowoffsety+graphHeight*0.9)+")");
+
         };
     })
 });
