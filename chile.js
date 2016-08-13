@@ -231,6 +231,22 @@ d3.json("graph_info.json", function(error, graph) {
         var windowoffsetx = 600
         var windowoffsety = 225
 
+        // var windowgraph = svg
+        //     .append("rect")
+        //     .attr("class", "background")
+        //     .attr("x",500)
+        //     .attr("y",90)
+        //     .attr("width",graphWidth*1.5)
+        //     .attr("height",graphHeight*1.5)
+        //     .attr("fill","lightgrey")
+        //     .style("opacity",0)
+        //     .transition()
+        //     .attr("x",600)
+        //     .attr("y",225)
+        //     .style("opacity",0.8)
+        //     .attr("width",graphWidth)
+        //     .attr("height",graphHeight);
+
         var windowgraph = svg
             .append("rect")
             .attr("class", "background")
@@ -241,11 +257,11 @@ d3.json("graph_info.json", function(error, graph) {
             .attr("fill","lightgrey")
             .style("opacity",0)
             .transition()
-            .attr("x",600)
-            .attr("y",225)
-            .style("opacity",0.8)
-            .attr("width",graphWidth)
-            .attr("height",graphHeight);
+            .attr("x",600+graphWidth/19.9)
+            .attr("y",windowoffsety+graphHeight*0.1)
+            .style("opacity",0.4)
+            .attr("width",graphWidth-graphWidth/19.9)
+            .attr("height",graphHeight*0.8);
 
         var legend_name=svg
             .append("text")
@@ -469,9 +485,9 @@ d3.json("graph_info.json", function(error, graph) {
                 .ticks(10);
 
             svg.append("g")
-                .attr("id","xaxis")
                 .call(xAxis)
                 .attr("class","axis")
+                .attr("fill","#888888")
                 .attr("transform", "translate(0,"+(windowoffsety+graphHeight*0.9)+")");
 
             var y = d3.scale.linear()
@@ -486,6 +502,7 @@ d3.json("graph_info.json", function(error, graph) {
             svg.append("g")
                 .call(yAxis)
                 .attr("class","axis")
+                .attr("fill","#888888")
                 .attr("transform", "translate("+(windowoffsetx+graphWidth/19.9)+","+(windowoffsety+graphHeight*0.9)+")");
 
         };
