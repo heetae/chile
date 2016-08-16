@@ -62,10 +62,10 @@ d3.json("graph_info.json", function(error, graph) {
         .attr("height",height)
         .attr("fill","white")
         .on("click",function(){
-            nodeElements.style("opacity", 1).classed("selected",false);
-            linksElements.classed("selected",true);
-            toggle = 0;
-            oneclick = 0;
+            // nodeElements.style("opacity", 1).classed("selected",false);
+            // linksElements.classed("selected",true);
+            // toggle = 0;
+            // oneclick = 0;
             remove_drawing()
             nodeElements.style("opacity", 1).classed("selected",false); // clear double-cick-connected
             linksElements.style("opacity", 1);  // clear double-cick-connected
@@ -111,6 +111,7 @@ d3.json("graph_info.json", function(error, graph) {
         .data(graph.nodes)
         .enter()
         .append("circle")
+        .attr("id",function (d) {return d["id"];})
         .attr("cx", function (d) {return d["x"];})
         .attr("cy", function (graph) {return graph["y"];})
         .attr("r", 40)
@@ -177,76 +178,64 @@ d3.json("graph_info.json", function(error, graph) {
     function clicked() {
         var tmp = d3.select(this);
         if (dblclick_timer) {
-            clearTimeout(dblclick_timer)
-            dblclick_timer = false
+            clearTimeout(dblclick_timer);
+            dblclick_timer = false;
             // double click code code comes here
             // console.log("double click fired")
         } else {
 
             dblclick_timer = setTimeout(function(){
-                dblclick_timer = false
+                dblclick_timer = false;
                 // single click code code comes here
                 // console.log("one click fired");
-                choice(tmp)
+                choice(tmp);
+                console.log(tmp.node().__data__.communityconsistancy);
             }, 250)}
-        }
+        };
 
-        function choice(node){
-            if (toggle == 1 && oneclick ==1) { //when connected-mode
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                toggle = 0;
-                oneclick = 0;
-                remove_drawing()
-                // console.log("a");
-            } else if (toggle == 0 && oneclick ==0){ // when select one while not connected, not selected
-                //Put them back to opacity=1
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", true);
-                deltagraph(node);
-                toggle = 0;
-                oneclick=1;
-                // console.log("b");
-            } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){ //when selected, select 'selected'
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", false);
-                oneclick = 0;
-                remove_drawing()
-                // console.log("c");
-            } else { // when selected, select 'not-selected'
-                nodeElements.style("opacity", 1).classed("selected",false);
-                linksElements.style("opacity", 1);
-                node.classed("selected", true);
-                deltagraph(node);
-                // console.log("d");
-                toggle = 0;
-                oneclick=1;
-            }
+    function choice(node){
+        console.log(node.node().__data__.id)
+        console.log("toggle: "+toggle)
+        console.log("oneclick :"+oneclick)
+        if (toggle == 1 && oneclick ==1) { //when connected-mode
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            toggle = 0;
+            oneclick = 0;
+            remove_drawing()
+            // console.log("a");
+        } else if (toggle == 0 && oneclick ==0){ // when select one while not connected, not selected
+            //Put them back to opacity=1
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            deltagraph(node);
+            toggle = 0;
+            oneclick=1;
+            // console.log("b");
+        } else if (toggle == 0 && oneclick ==1 && node.style("fill") == "rgb(255, 0, 0)"){ //when selected, select 'selected'
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", false);
+            oneclick = 0;
+            remove_drawing()
+            // console.log("c");
+        } else { // when selected, select 'not-selected'
+            nodeElements.style("opacity", 1).classed("selected",false);
+            linksElements.style("opacity", 1);
+            node.classed("selected", true);
+            deltagraph(node);
+            // console.log("d");
+            toggle = 0;
+            oneclick=1;
         }
+    };
 
         var graphWidth = 320;	// SVG 요소의 넓이
         var graphHeight = 240;	// SVG 요소의 높이
         var dataSet = [];	// 데이터셋
         var windowoffsetx = 600
         var windowoffsety = 225
-
-        // var windowgraph = svg
-        //     .append("rect")
-        //     .attr("class", "background")
-        //     .attr("x",500)
-        //     .attr("y",90)
-        //     .attr("width",graphWidth*1.5)
-        //     .attr("height",graphHeight*1.5)
-        //     .attr("fill","lightgrey")
-        //     .style("opacity",0)
-        //     .transition()
-        //     .attr("x",600)
-        //     .attr("y",225)
-        //     .style("opacity",0.8)
-        //     .attr("width",graphWidth)
-        //     .attr("height",graphHeight);
 
         var windowgraph = svg
             .append("rect")
@@ -350,8 +339,9 @@ d3.json("graph_info.json", function(error, graph) {
             .text("Synchronization Stability of Chilean Power Grid");
 
         var legend_node_circle=svg
-            .attr("class", "nodes")
             .append("circle")
+            .attr("fill","orange")
+            .attr("stroke","#fff")
             .attr("cx", 620)
             .attr("cy", 80)
             .attr("r", 40)
@@ -395,7 +385,52 @@ d3.json("graph_info.json", function(error, graph) {
             .style("opacity",1)
             .text("Edge: 573");
 
-        var reference=svg
+        var cc_color = d3.scale.linear()
+            .domain([0.5, 1])
+            .range(["white", "red"]);
+
+        var cc_bar=svg
+            .append("rect")
+            .attr("class", "background")
+            .attr("x",windowoffsetx)
+            .attr("y",windowoffsety+graphHeight+50)
+            .attr("width",70)
+            .attr("height",20)
+            .attr("rx",4)
+            .attr("ry",4)
+            .style("opacity",0.7)
+            .attr("fill","darkslategray")
+            .on("click",function(){
+                // nodeElements.style("opacity", 1).style("fill",function(d){return cc_color(d.communityconsistancy);})
+                nodeElements.style("opacity", 1).style("fill",function(d){return cc_color(d.communityconsistancy);})
+                d = d3.selectAll(".nodes circle").node().__data__;
+
+                // nodeElements.data(graph.nodes).enter()
+                // d3.selectAll(".nodes circle").style("opacity", 1).classed("selected",false);
+                // d3.selectAll(".nodes circle").style("fill",function(d) { return cc_color(d.communityconsistancy);})
+                // d3.selectAll(".nodes circle").style("stroke","#888888")
+                // nodeElements.style("opacity", 1).classed("selected",false)
+
+            });
+
+        var or_bar=svg
+            .append("rect")
+            .attr("class", "background")
+            .attr("x",windowoffsetx)
+            .attr("y",windowoffsety+graphHeight+20)
+            .attr("width",70)
+            .attr("height",20)
+            .attr("rx",4)
+            .attr("ry",4)
+            .style("opacity",0.7)
+            .attr("fill","darkslategray")
+            .on("click",function(){
+                nodeElements.classed("selected",false)
+                // d3.selectAll(".nodes circle").style("opacity", 1).classed("selected",false)
+                // d3.selectAll(".nodes circle").style("stroke","#fff")
+            });
+
+        var reference=svg.append("a").attr("xlink:href", function() {return "http://google.com")
             .append("text")
             .attr("class","spec_label")
             .attr("x",width-260)
@@ -456,7 +491,6 @@ d3.json("graph_info.json", function(error, graph) {
                 .attr("class","spec_label")
                 .style("fill","#dc143c")
                 .attr("opacity",1);
-
         };
 
         //draw axis
