@@ -430,7 +430,7 @@ d3.json("graph_info.json", function(error, graph) {
                 // d3.selectAll(".nodes circle").style("stroke","#fff")
             });
 
-        var reference=svg.append("a").attr("xlink:href", function() {return "http://google.com")
+        var reference=svg.append("a")
             .append("text")
             .attr("class","spec_label")
             .attr("x",width-260)
